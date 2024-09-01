@@ -1,0 +1,97 @@
+body {
+    background-image: url("https://comindesign.fr/wp-content/uploads/2018/08/website-design-slider-background-stockton.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: Ubuntu;
+    font-weight: 300;
+  } 
+  
+  nav {
+    background-color: rgba(0,0,0,0.5);
+    padding: .33rem;
+    border-radius: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto 10px auto 10px auto;
+    padding-left: .33rem;
+    margin: .2rem;
+  }
+  
+  nav ul a {
+    text-align: center;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    padding: .33rem;
+    text-decoration: none;
+    color: white;
+    border-radius: .33rem;
+  }
+  
+  .currentP {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  .noBorder {
+    border-style: none;
+  }
+  
+  .noMargin {
+    margin: none;
+  }
+  
+  .noPadding {
+    padding: none;
+  }
+  
+  .titleLine {
+    border-bottom: 3px solid white;
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  .cursive {
+    font-family: Playwrite CU;
+  }
+  
+  .colourful {
+    animation: rainbow 1s infinite linear alternate;
+  }
+  
+  .content {
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.001rem 1rem;
+    border-radius: 1rem;
+    width:90%;
+    margin: 0 auto;
+  }
+  
+  @keyframes rainbow {
+    0% {color:rgb(51, 204, 204)}
+    50% {color:rgb(0, 102, 204);}
+    100% {color:rgb(153, 153, 255);}
+  }
+  
+  #announcementDiv {
+    width:100%;
+    background-color: rgba(0,0,0,0.75);
+  }
+  
+  #announcementText {
+    margin: 0;
+    padding: 0;
+  }
