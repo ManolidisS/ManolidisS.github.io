@@ -31,6 +31,10 @@ body {
     color: white;
     border-radius: .33rem;
   }
+
+  nav ul a:hover {
+    opacity: 75%;
+  }
   
   .currentP {
     text-decoration: underline;
