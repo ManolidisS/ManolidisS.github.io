@@ -102,6 +102,18 @@ body {
 .file:hover {
   background-color: rgba(64,64,64,0.5);
 }
+
+.centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
   
   @keyframes rainbow {
     0% {color:rgb(51, 204, 204)}
