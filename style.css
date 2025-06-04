@@ -92,6 +92,11 @@ a {
   border-radius: 1rem;
   width:90%;
   margin: 0 auto;
+  transition: all .33s;
+}
+
+.content:hover {
+  padding: .001rem 2rem;
 }
 
 .blog-title {
@@ -152,4 +157,17 @@ a {
 #announcementText {
   margin: 0;
   padding: 0;
+}
+
+#handwritten {
+  stroke-dasharray: 10918;
+  stroke-dashoffset: 10918;
+  animation: write 3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes write {
+  to {
+      stroke-dashoffset: 0;
+  }
 }
