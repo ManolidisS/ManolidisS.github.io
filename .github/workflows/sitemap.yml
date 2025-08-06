@@ -1,44 +1,21 @@
 name: Generate sitemap
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
-      - main    # your default branch
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Check out your code
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      # … your checkout / generate steps …
 
-      # 2. Generate sitemap.xml
       - name: Generate sitemap
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://manolidiss.github.io/
-          additional-extensions: png csv zip pdf
-
-      # 3. Debug: show repo file tree
-      - name: Debug list files
-        run: |
-          echo "📂 Repository contents:"
-          ls -R .
-
-      # 4. Commit & push sitemap back (optional)
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-      - name: Commit sitemap
-        run: |
-          git add sitemap.xml
-          git commit -m "chore: update sitemap.xml [skip ci]" || echo "No changes to commit"
-      - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          additional-extensions: pdf png csv zip
