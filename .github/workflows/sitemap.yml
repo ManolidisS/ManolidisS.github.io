@@ -25,7 +25,7 @@ jobs:
           additional-extensions: png csv zip pdf
 
       # 3. Debug: list files (optional, but helps you see where sitemap.xml lands)
-      - name: Debug: list files
+      - name: Debug list files
         run: |
           echo "📂 Root directory:"
           ls -R .
