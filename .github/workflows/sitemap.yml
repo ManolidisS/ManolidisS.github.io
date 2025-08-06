@@ -1,0 +1,50 @@
+# Vibe Coded
+name: Generate sitemap
+
+on:
+  push:
+    branches:
+      - main    # or whatever your default branch is called
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout your repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Generate sitemap.xml
+      - name: Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://manolidiss.github.io/
+          additional-extensions: png csv zip pdf
+
+      # 3. Debug: list files (optional, but helps you see where sitemap.xml lands)
+      - name: Debug: list files
+        run: |
+          echo "📂 Root directory:"
+          ls -R .
+
+      # 4. Configure Git for committing
+      - name: Configure Git for commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      # 5. Commit sitemap.xml (no-op if no changes)
+      - name: Commit sitemap
+        run: |
+          git add sitemap.xml
+          git diff --staged --name-status
+          git commit -m "chore: update sitemap.xml [skip ci]" || echo "No changes to commit"
+
+      # 6. Push back to main
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
