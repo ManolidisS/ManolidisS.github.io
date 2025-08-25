@@ -133,6 +133,20 @@ a {
   clear: both;
   display: table;
 }
+
+.tablic-p {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.tablic-c {
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+}
   
 @keyframes blue {
   0% {color:rgb(51, 204, 204)}
