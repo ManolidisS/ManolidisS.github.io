@@ -64,6 +64,16 @@ a {
   animation: rainbow 1s linear 1;
 }
 
+.rainbowFixList li a:hover {
+  background-clip: text;
+  animation: rainbow 1s linear 1;
+}
+
+.rainbowFix:hover {
+  background-clip: text;
+  animation: rainbow 1s linear 1;
+}
+
 .noBorder {
   border-style: none;
 }

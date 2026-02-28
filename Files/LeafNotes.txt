@@ -1,0 +1,485 @@
+The following are (very) rough notes I made whilst taking the AI Dilemmas and Dangers Course at Leaf.
+There are many grammatical and spelling mistakes, as these notes were primarily intended to be just for personal use.
+There might also be technical errors in here.
+
+Rough format:
+##### Week X #####
+Type of content (video, article, etc.)
+Summary sentences of the video.
+Word: definition
+
+Formatting may be highly inconsistent, and sentences may not be coherent.
+
+Enjoy!
+ 
+#########################==========#########################
+
+AI Crashcourse Videos
+##### Week 1 #####
+First Video
+A machine is said to be an AI if it can interpret data, learn from the data, and then use that data to carry out a specific goal.
+Moore’s law causing increased processing power and having much more data because of the internet have thawed the ‘AI winter.’
+This concerns everyone, and every country should have a say.
+
+Second Video
+[Pretraining]
+An LLM is essentially a deterministic function which outputs words with probabilities. The next word however is randomly chosen, so the same prompt can cause a different response.
+Trained on very large quantities of data.
+A techique called backpropegation is used to train and dial the AI parameters (called Large LM because it has so many paramters).
+[Reinforcement Learing with Human Feedback]
+Workers provide feedback which in turn changes the parameters again, so that outputs are more tailored to what is desired.
+Words are broken down into numbers (actually vectors); continuous data is needed to train LLMs.
+Transformer technique made by Google uses attention to see how words in a sentence link together, so a word can have a different vector depending on the context (e.g. if 'river' in word -> 'bank' != 'bank', 'bank' = 'riverbank').
+Transformer technique also allows for feedforward operation, giving the model extra capacity for patterns learnt about language during its training.
+
+Reading
+Overfitting can be a problem (AI becomes too specialised in its training data and not on new data).
+Main factors are compute size (Floating-point operations per second), data set, parameters, training time.
+New Chichilla's law says (~x100 compute size -> ~x10 parameter + ~x10 data)
+Bitter Lesson tells us that whilst human ingenuity in getting specific algorithms for specific AI sometimes helps, usually generalised algorithms for generalised computing just tends to beat it when scaled.
+Hence, two hypothesies: Weak Scaling (scaling is important, but other factors are also significantly important), and Strong Scaling (other factors are trivial in comparison to scaling, which is the main bottleneck).
+Video
+Algorithms, data, and compute are the main factors of AI growth (also parameters of a model).
+Training compute = computational power used to train AI (FLOPs)
+Pre deep-learning era (training compute doubling every ~20 months)(1950-2010) -> Deep-learning era (Every ~6 months)(2010-2015/16) -> large-scale era (every ~10 months)(2016+) 
+Video
+Ai dangers are often shrugged off as science fiction, but many times in history science fiction has become reality (e.g. nuclear bombs).
+Video
+AI can become very biased from its dataset, leading to large problems (e.g. very large error rates with FaceID on black women, political radicalism).
+AI can be used to surveil citizens and erode their right to privacy.
+The way AI works also means that it is difficult to understand how it makes decisions to a certain stimulus.
+FAT/ML strives for less biased, more ethical AI.
+NowAI mentions how diverse tech teams developing the AI can decrease bias in the AI overall.
+New legislation (e.g. by the EU) aims to mitigate AI privacy concerns.
+Sam Altman warns: "power will shift from labour to capital."
+GNoME (AI) has discovered a number of materialsmaterial discovery an order of magnitude greater (almost) than humans.di
+AI getting better might result in a positive feedback loop (more data -> better AI -> even more data, etc.)
+Lower labour costs can perhaps be good, as it's the main price driver of supply chains. He argues there are to ways to afford to live: make more money (good for only one person), or prices drop (good for everyone). He is suggesting that AI will cause the second option.
+Altman proposes a neo-capitalistic model with AI at the core and an American "Equity Fund" (annual payout to each American of certain companies above a valuation every year).
+Altman argues that economic growth is essential, because otherwise the economy is zero-sum, and even democracies become antagonistic as people seek to take wealth from each other.
+Video narrator says countries will always research their AI; they'll never stop (so they don't lose the competitive edge over other countries).
+Narrator concludes with two paths ahead: AI power gets concentrated in the hands of few, very negaative; or AI gets distributed across the population, very good for everyone as education, the elderly, etc. are helped.
+More and more AI researchers are reporting concerns about AI safety and the future of AI, particularly concerning 'rouge AI' or 'rouge agents,' which might villanise humans (not all though, some are optimistic).
+
+##### Week 2 #####
+Introduction
+An agent is an AI system that has 'agency,' meaning it can do things (e.g. surf the web, order pizza, and physically influence the world).
+Agent Foundations is a field dedicated to creating agents which carry out the tasks they are instructed to without creating any danger (towards (human) life).
+Agent Foundations Model (Simplified): Create moral and economic goals for the agent (we want these goals to be aligned with human values; this is called AI alignment)-> develop metrics to measure the agent and see if these goals are possible -> evaluate how agents interact with and are influenced by their environment (AI governance), including both in training and operation.
+Misalignment is when an AI has intermediate/extra goals in mind that aren't necessarily required or optimal for it to complete its goal (e.g. Chess bots often capture queens because it's a 'good' move, even if there is a better move leading to a faster checkmate).
+AI can sometimes exploit loopholes to get its goal achieved.
+
+Video
+Specification gaming is when an objective gets completed literally, but the actual desired outcome was not (think Naddakan in Ninjago).
+Human feedback is sometimes used as a solution to specification gaming. Sometimes however, it is easier to learn to trick the humans (act like something is done right, e.g. putting a robot hand in front of a camera to look like it's grabbing a ball) then to actually do the objective. When this is the case, the AI will naturally start fooling the humans (as this gets it positive feedback, but the objective is not actually completed).
+
+Video (Optional)
+RLHF (defined above) uses: the AI + guidelines + human feedback, iteratively, to create a better model.
+Another AI model can then evaluate and give feedback on prompts by training it on prompts + responses + human feedback to those responses (afterwards, both the AI and humans can give feedback). This AI model gets re-calibrated with every further human evaluation.
+There can be a problem in this method - the AI just learns to say 'nice' words ("Once upon a..." "doggo, thank you, sweet, lovely"). To overcome this, another AI 'coach' (evaluator) model is used - the original AI, which ensures that the responses still make sense.
+
+Video
+An agent is something which has goals/preferences, and takes action to achieve those goals/preferences.
+Terminal goal: a goal an agent has.
+Instrumental goal: a goal that an agent has in order to achieve another goal (often for humans, money, which is a convergent instrumental goal).
+Convergent Instrumental Goals: instrumental goals that a lot of agents have (e.g. self preservation).
+Goal preservation: a convergent instrumental goal - agents will try to stop their terminal goals from being modified so that they can achieve their original terminal goal.
+Another convergent instrumental goal: self-improvement, so that the terminal goal can be reached. For AI, this could include increasing processing power (which will often require resource aquisition).
+
+Video
+Longtermism: ensuring that you make the decision (now) which will have the most positive impact on the future, as it contains many, many more human lives.
+According to longtermism, preventing catastrophies >> technological advancement (because all human lives might cease to exist in a catastrophy).
+Expected value = value * probability. In EA, value = impact, so impact * probability.
+No intervention has a 100% chance of having an impact.
+The narrator argues that even not being a longtermist and maximising current humans' lives by hastening technological advancement will still yield similar effects (as you push technological advancement).
+
+Video
+X-risks: existential risks (such as the extinction of the human racE).
+S-risks: an even worse type of risk, such as an incredibly large number of being suffering terribly.
+S-risks are viewed as worse than X-risks.
+Exestential risks are seen as one of the most important things (to prevent) in longtermism. To classify them, one paper uses a scope (how many people it affects) and severity (how much does it affect them) model.
+Video
+AI systems are trained using stochastic gradient descent.
+Video
+"We'll never make AGI." Goal and promise of the field, can be often (but not always, sometimes it is based on true belief) used as an excuse (even if they don't believe in it) to avoid resopnsibility.
+"It's too soon to worry." Can be said subjectively, even when we are ridiculously close to the event. Like a homework assignment, best practice is to almost always start ASAP. ALso, we cannot, for certain, know how much time we have.
+"It's like overpopulation on Mars." Not the best analogy; overpopulation is a gradual, predicted problem - AI safety is much more immediate and basic.
+"It won't have bad goals unless we put them in." See convergent instrumental goals.
+"Just don't have explicit goals." Systems with implicit goals also exhibit such behaviour, although it is harder to identify.
+"Just have human/AI teams." Teamwork is about pursuing common goals, therefore, AI misalignment precludes teamwork (if you have different goals, you can't collaborate with it). Also, human error can still allow AI faults to be exposed.
+"We can't control research." Yes, we can. For example, there is little human genetical engineering because it's against many moral beliefs. 1980 UN legislation bans robots that use lasers to blind people. Hence, this technology is rarely used. This is a counterargument to countries not working together because of competition.
+"You're just against AI because you don't understand it." Alan Turing, I,J. Good, Bill Gates, Stuart Russell, etc. are some of the biggest contributers to AI. No human understands it fully, but these people likely understand it most.
+"We can just turn it off." Agents can see this coming, and this is against the convergent instrumental goal of self-preservation, so it's not guaranteed that we can do this with an agent powerful enough.
+"Talking about risks is bad for buisness." A lot of things are bad for business, but they are prioritised because of their moral value and because human lives and safety should go above money making. See Chernobyl.
+
+Quick notes of Opinions
+Longtermism has its good points but can be easily flawed (when using expected value), because theoretically anything with an astronomically low chance of happening could be deemed more important because of the amount of people that it impacts (also, past a certain point, it feels like a logical fallacy - more suffering is happening here so this issue is more important, and on and on and on...). Also longtermism doesn't often have as measurable goals (something which actually also applies to AI), so it is much easier to decieve funders (i.e. 'take my word, I'm saving humanity from future aliens' - how?).
+Perhaps specification gaming and convergent instrumental goals can be mitigated through the use of multiple 'ethics' AIs which have the terminal goals of prioritising human life, etc. and freedoms (so self-preservation wouln't arise as naturally, perhaps?).
+
+Notes from meeting:
+Agent classification: needs intelligence to be considered an agence? perhaps there can be classification, broken into different levels.
+Trolly prblem. All lives should be valued equal because possibilitie sendlesS? WOuld you do if it family member?
+Closed systems, with human monitoring - possible solution
+How close to risk is too far? how much is too capable?
+Should really powerful AIs be self-contained instances, so they cannot spread easily?
+
+Activities sheet - Forecasting:
+Forecasting uses quantitative methods, as opposed to predicting (e.g. 80% instead of likely), and they make testable predicitons (which can be checked later, and can hence change the way they forecast so it's more accurate).
+Forecasting helps predict the short-term (and long-term) future, which can help dictate where finite resources should go (to the place that can make the biggest impact).
+Being a good forecaster requires: calibration (90% means in 10 trials, you'd expect it to happen 9 times), discrimniation (predicting high chances when something is going to happen, and vice versa - the more information you have, the better).
+Imagine a graph with forecasted probability on the x-axis and real probability on the y-axis. It should be a y=x graph. If it isn't, recallebrate!
+Base rate ~ Reference Class ~ Outside View (about the same thing)
+Reference class: a class of events in the past that relate to the thing you are forecasting. Use them to more accurately forecast. How often it happened historically ~ How often [event] will happen.
+Some cons/negatives: Bigger samples give a more accurate rate, but this trades of against specificity.
+More specificity ~ smaller sample size (getting this balance right is one of the hardest parts).
+Ensure you understand resolution criterea (what must happen for an event to be considered resolved; don't assume "common sense," be pedantic!).
+
+##### Week 3 #####
+
+(Long) Video (hard and technical - BEWARE)
+There are many technical approaches to AI safety, namely: Alignment, Automating Alignment, Governance, Evaluations, Interpretability, Threat Modelling, and Deconfusion (each approach may be non-disjoint).
+Interpretability: how well we understand AI systems.
+Automating alignment: using AI to do alignment research.
+Deconfusion: (The assumption that) we need better understandings of foundations to effectively research alignment.
+Threat modelling: modelling how/when AI can become dangerous.
+Alignment: essentially, align what the AI does with what we want it to do. Can be split into two sections: Intent Alignment (AI wants to do the same thing that we do) and Capability Robustness (the AI does what the AI wants; no defects/slip-ups).
+Intent alignment can be further split up into two sections: Outer (what we want aligns with what the AI is trained on (not data; mathematical loss/reward function)) and Inner Alignment (What the AI wants is aligned what what the AI is trained on)
+This model is quite simplified. It is not fully well defined, and may not accurate reflect multipolar AI.
+The main actors working on AI safety are: Organisations (Deepmind, OpenAI), Academia, Independent Researchers, and some loose communities.
+Specification gaming is a result of outer misalignment. A possible solution is RLHF.
+RLHF won't work for superhuman AI, we won't be able to evaluate the output. Also, hallucinations still occur (and often because RLHF trains AI to tell you what you want to hear, instead of the truth).
+Goal misgeneralisation is a result of inner misalignment. The AI's capabilities may generalise, but its goal does not (generalise ~ if it can do it with unseen data). Possible solution is to train in diverse environments.
+Another possible solution for misgeneralisation is adversarial training: search for examples of misgeneralisation + train on those (solution still not perfect).
+Often, we don't want a mathematical function in the middle, so we will have direct intent alignment.
+Intent alignment approaches include: Scalable oversight (humans supervise AI gradually getting better), Shard Theory (there is no big utility function inside someone's brain to optimise - we just respond to our given stimuli at any given point in time).
+Scabale oversight approaches include: ERO (Extended Reasoning Oversight, i.e. think out loud, making it more interpretable too)
+Adversarial Attack Robustness: DL systems often have weird failures (when given 'poisoned' prompts). They need to be made more robust.
+Interpretability in image generators can be improved using feature visualisation (visualising (using maths) what things make neurons fire).
+Increasing interpretability increases how well we understand AI systems, which may (help) increase their capabilities.
+Model evaluations are used to show what (current) AI systems can do. Shows what research needs to be done, and can be used for policy making.
+Topics in governance include regulating compute (although governance is usually not technical).
+OpenAI wants to automate alignment (and to automate interpretability), but the alignment AI still have to themselves be aligned.
+Topics in deconfusion include: natural abstractions (explaining why we naturally recognise/distingush things in a certain way (e.g. table + bottle on top \neq left table+ bottle with right table, human values), etc.). Understanding abstractions helps to find mathematical formalisations of goals and values.
+People disagree on how hard alignment is, from difficult to impossible.
+
+Blog (Article)
+[Reiteration] RLHF doesn't always scale for larger models, as tasks become too complex for humans to accurately judge. For example, RLHF can lead to deception, hallucinaton and sycophancy (agreeing with the users' beliefs) in complex tasks, as it satisfies humans who skim the answer.
+Better feedback might help mitigate some of these problems.
+Scalable oversight: alignment techniques for AIs that may exceed human capability.
+Task decomposition: breaking complex tasks down into smaller tasks that are easier to give feedback on. This might not be possible for all tasks.
+IA (Iterated amplification): used for task decomposition; break a large, complex task down into simpler subtasks.
+We are amplifying the model as it can run instances of itself for the subtask, amplifying its capabilities. Chain-of-thought logic can also be used to amplify models.
+IDA (Iterated ampliciation and distillaition) adds a 'distillation' step that uses the results from IA to train the model on what a 'good example' would look like, making it more accurate at doing the given task in one step.
+Scaffolding: IA processes that incorporate tool use, or make the model act like an agent.
+Recursive Reward Modelling (RRM): using AI to help humans give better feedback. Recursive because a model could be used, with humans, to train a better model, which then could be the model used in RRM.
+Constitutional AI: an AI model gives the feedback instead of humans, but is given a set of guidelines (a constitution) written by humans. Cheaper than RRM.
+Debate: AIs argue, and then a human judge decides the winner. It has the positives of reducing deception and sycophancy, as the other AI can point this out.
+Debating agents might break down hard questions into easier-to-answer sub-questions, making them easier to solve.
+Arguments against debate: the truth is not always persuasive, biased arguments can be; irreducible complexity, not all questions can be broken into sub-questions; models may collude.
+Weak to strong generalisation: use feedback anyway and see how models generalise, even with 'weaker' mentors. Teachers can train smarter students! (e.g. 'aligned' GPT-2 with 'unaligned' GPT-4). Works for some tasks., but not for others.
+This works because AI models are pre-trained, and alignment is just calibration.
+Techniques include bootstrapping (gradually and iteratively phasing out teacher and student. Old student -> new teacher) and auxillary confidence loss ([uses loss function to] make larger model more confident in its abilities over time, instead of repeating the supervisor's mistakes).
+Scalable oversight might not work because... uncertain assumptions are made, it doesn't scale (some more powerful AIs have seen worse performance on this), not entirely robust (misalignment can still be an issue, e.g. with constitution AI) and even perfect feedback would still allow for other problems (e.g. inner misalignment and generalisation problems with unseen data).
+
+Article (https://time.com/7203729/ai-evaluations-safety/)
+It's getting harder to create good evals for AI models as they get more and more capable (and do well on human tests).
+New harder evals are needed, which can serve as warning signs, when dangerous abilities are demonstrated.
+An old form of evals was to see how many years it would take for AI to reach (or exceed) human capability from the benchmark's introduction.
+There are now many forms of evals: red-teaming, trying to exploit AI and see if and when malicious behaviour arises; other evals measure capability, to do a certain task, to decieve, to create bio-weapons, etc.
+MMLU: a hard test that has 16,000 multiple choice questions spanning different fields.
+More capable models may not give much higher scores as there will always be some errors in the training data.
+Designing evals is difficult. You must make it scientifically rigorous, but also realistic, matching the real world. Data contamination is also a problem, where the AI is trained on the answers and does not use reasoning.
+Evals can be exploited/gamed, either the person designing the model (contaminating its training data) or the model itself (targettting what is measured by the eval, not the overarching theme of its capabilities).
+FrontierMath is an AI eval on hard, original maths problems (which are not shared publicly).
+Whilst not certainly, mathematical reasoning ~ other reasoning ~ capability in other fields.
+Humanity's Last Exam: another benchmark, but on more questions and spanning more STEM fields.
+Re-Bench: an engineering eval on seven problems. AI tend to do better early on (compared to humans), but can get stuck.
+AI models tend to do very well on closed problems, but often lack the creativity to solve open problems (evidence: "They can solve complex closed problems if you serve them the problem description neatly on a platter in the prompt, but they struggle to coherently string together long, autonomous, problem-solving sequences in a way that a person would find very easy").
+It's debated whether evals test for reasoning or knowledge - perhaps they don't generalise with new data.
+ARC-AGI: Novel puzzle eval that requires reasoning.
+Better evals are needed, whether to satisfy new legislation or commitements made by companies.
+Safeguards can often be circumvented with AI models.
+[Expert Opinion (Hobbhahn)] leading models should be evaluated before publishing. Other sectors require audits, why not AI? It's in the company's interest to hide their security vulnerabilities, so it has to be outsourced.
+Evals can be very expensive to run, and even more expensive to develop.
+Evals need constant phasing as they become saturated.
+
+Video (https://youtu.be/eP1dSWFqKVs)
+AI's intelligence does not often work as we would expect. Like above, it's sometimes knowledge-based instead of reasoning based.
+Cognitive science and techniques used to understand people's intelligence can be used to improve interpretability.
+Positive manifold: a phenomenon cognitive science, where ability in one cognitive test tends to correlate to ability in other cognitive tests. Hence, one test can be used to classify 'intelligence.'
+However, people are usually most intelligent in their specialised area (e.g. physics, medicine, etc.). Likewise, finetuned LLMs (e.g. poetry, coding) are more intelligent in their specalised areas.
+Hence, to evaluate AIs, we should test them on their specific abilities.
+Evals can contain many errors, and aren't always useful for showing reasoning as the AI might be trained on eval data, or there might be an underlying pattern.
+You can evaluate reasoning by seeing the chain-of-thought (if it exists) AIs display on questions, and/or probabilities of different outputs (and maybe even parameters).
+Evals aren't just about getting answers right, but also about how much computing was used, what information they were given, and what tools were used.
+Ideally, it would be great to have a single unit of measurement to compare scores across evals (meters (more literal), or IQ (more statistical)).
+Observational Scaling Laws: Predicting an AI's performance on evals from a few underlying ability scores. These still hold for agentic benchmarks (where AI has to complete an entire task (e.g. fixing code, call centre)).
+Validity; test the entire capability you're evaluating; ensure the questions aren't memorised, on topic, and have no unintended patterns. Tests across different environments and groups of test takers are better, as more AIs can take the tests. The test should test real world abilities.
+Construct validity: how well an eval measures what it claims to measure.
+Greater validity = greater confidence; data can be used.
+Define the capabilities being measured rigorously.
+Perhaps vary the way questions are phased to avoid data contamination, and/or have a certain amount of questions not publicly avaliable (or at least out of training data).
+Poor performance in an eval -> perhaps the questons aren't being asked right (e.g. counting 'r's in strawberry - LLMs see words as numerical tokens!).
+Good tests: BiB (which compares AI to infants, using simple games/picking simple objects on a screen), CogBench (7 cognitive psychology experiments adapted for AI), animalAI (virtual environment where AI is testing using existing animal tests).
+Evals important because: helps prevent catastrophe, shows return on investment, can be used to compare AI to see which is more capable, helps interpretability and hence alignment.
+
+METR's Task-horizon Benchmark: an eval to see how well AI does real-world projects.
+
+Video
+Mechanistic Interpretability: being able to see past the 'blackbox' of AIs, and understand their internal cognitition (what algorithms run s.t. it takes the inputs -> intermediate things -> outputs).
+It's important because: it's fun; it helps us distinguish and understand whether AI does things because it's aligned or deceptive or if it's aligned but mislearnt things; it increases interpretability, helping us develop AI further.
+Promising path, achieving high level of reliability.
+
+Video (What Do Neural Networks Really Learn? Exploring the Brain of an AI Model) on Mechanistic Interpretability
+We have trained AI to 'figure things out for themselves,' but now we don't know what they've figured out.
+Convolutional Neural Networks: a type of neural network trained to classify grid-based inputs (e.g. images).
+CNVs work by passing the input through many neurons to give an output.
+CNVs work by getting a grid (e.g. of pixels), and passing it through a weight, and then adding the values up (e.g. it might be a weight like [1,1,1 , 1,1,1, -1,-1,-1], which will give a positive value when the top is brighter than the bottom). This creates a new image (grid), which is then passed through the next neuron. (Note: the value of the weight*grid becomes the value of the new center cell (in the video)).
+A bias term (after the filter) is used, and we round negative results to 0.
+Layers of the network are made up using multiple of the above processes, which themselves are called channels.
+We can zoom into a specific channel and feed it different inputs to see what activates it. This helps us identify what it does, but isn't a perfect indicator.
+What we also do is feed the neuron (or the entire channel) a random noise input, and then use maths to change the input until it fully activates the neuron. What we get is still static, which isn't very useful.
+Hence, we often try and optimise for an image that 'makes sense' - one which does optimise and isn't fully static.
+Transformation robustness: if a neuron (or AI system) can still recognise an image after it has been transformed (stretched, rotated, etc.).
+Another method we use used the Fourier transform. Instead of changing each pixel directly, the image is broken up into constituent 'waves,' which are then changed by the optimiser. This makes the adjustment more smooth (less pixelated static). This is feature visualisation.
+Less like maths, more like natural science. You make hypothesies, test neurons, update predictions.
+Curve-detection neurons show up all the time in LLMs.
+As you rotate the curved input, different neurons activate. Hence, the entire layer can be said to check for circles.
+We also find the connections between neurons make sense somtimes (e.g. left dog head neuron stimulating left dog neck neuron, but inhibiting right dog neck neuron), helping interpretability.
+Polysemanticity: When a neuron or channel is stimulated by more than one feature at once.
+
+Post (Nobody’s on the ball on AGI alignment — EA Forum)
+There's a massive shortage of people working on alignment. In 2023, there were about ~100,000 ML researchers and about ~300 alignment researchers!
+Most of those researchers aren't even working on scaleable alignment!
+[Opinion] Skepticism regarding mechanistic interpretability - sure we can get insights, but it is unlikely we will fully reverse engineer GPT-7.
+Pros/Cons of Scalable Oversight: Best theory so far + how science usually works; too vauge, might not work, emperical assumptions (maybe the capabilitity comparison between successive AI models is too large for IA to work), we cannot be certain scalable alignment will be solved (dangerous: we won't know whether it's safe to deploy AGI).
+[Opinion] scalable alignment is an ML problem, which requires direct or ML-adjacent solutions (i.e. decision theory purely isn't gonna help).
+(If and) when AI reaches superhuman levels, we cannot rely on human supervision to ensure alignment (it could be decieving/too complicated for us!).
+(If and) when AI makes its sucessive AIs, how will we know that those AI models will be aligned? How can we trust the old system's alignment strategy? How do we know its honest?
+AI are optimised to favour policies that get it a high reward - this is not the same as directly trying to maximise reward (e.g. dog trained on treats not maximising treats, but learnt to act good, the AI might not have access to this scalar number, so it's just being optimised!).
+Therefore it's not about figuring some compliacated, nuanced utility functions, but just about getting AI to do what they are prompted to do, safetly.
+Maybe we'll see a COVID-like response: yes, we were unready, but the magnitude of societal response was able to get things done (although people still died).
+[Opinion] alignment is becoming like a science. Author likes approaches where: conceptual thinking is used to make a framework, which is then emperically tested.
+[Opinion] there should be a much more vigorous and widespread effort to alignment.
+
+Notes from meeting
+Bottom-up: how we can align AI and control them, Top-bottom: AI systems will end up misaligned, so how can we fix this once they're trained and mitigate catastrophies? Alignment VS control
+##########
+
+Notes for myself:
+W3: Possible work for those interesting with crypto: see "What does it take to catch a chinchilla" paper
+Constallations task is ARC-AGI?
+
+W2 Optional Lab Session (Tic-Tac-Toe):
+Methods other than tree search: minimax (assume players play optimally) or monte-carlo (play randomly and see optimal solutions).
+Tree search is not scalable - bigger board/more players
+Heuristic function: a function that gives you the probability of winning that requires a smaller subset input (not all the moves, but if I have taken queen?, etc.)
+AI/NN Learning: compression (simplify large set of things into managable subset which we can learn) and search algorithm (finding the optimal, stochastic gradient descent). In more technical terms, either simplify the parameter space, or have an improved optimisation algorithm.
+Gradient descent uses exploiting, whilst (allegedly) evolution uses exploration. Expoitaiton-exploration tradeoff. Don't always optimise - local minimums can be problematic, so we should use a few random moves.
+Q-table: every single possible state, and the optimum move. Tensors can be used for m*n*k dimensions (where k is turns into the future).
+Rules-based: not adaptable like q-table; if __ then __
+Think about the game as an image, and then you can compress. (See Deep Q-learning).
+RLHF: we can build the q-table using human feedback instead of AI running in an environment. This shifts away from biases?
+Biases/flaws of the training environment -> bias encoded into model's strategies - specification gaming. Tampering with loss function -> changing AI's strategies.
+Inductive bias: as humans we encode shortcuts that make it easier to train AI (e.g. getting queen = always good), but this can result in specification gaming and goal misalignment (AI going for queen instead of checkmate). BUT, how else will it be optimised and compressed? Not having them optimise so agressively could mitigate these behaviours (reducing over-expolitation).
+Why not use evolutionary algorithms? Because it's too computationally heavy and unfeasible.
+What if alignment matrix/evals could be used when training the AI, and used in the loss function?
+Specification gaming caused because of loss function problems or over-expoitation (neural scientists say probably loss function).
+Bigger -> smaller model (for interpretability). We want to make the reconstruction error as small as possible.
+Optimising for reconstruction error might be a problem BECAUSE the bigger AI is aligned 98% of the time, and misalignment happens 2% of the time. But creating a simpler model likely reconstructs the 98%. Open pbolem: what to optimise for?
+
+##### Week 4 #####
+Article
+Deployment problem: a game-theoretic like problem; what to do if about to develop powerful AI. If you rush ahead with AI research, you could cause a global catastrophe. If you research too slowly, someone else (less cautious) could deploy such AI systems (also, competitive edge between countries like the US and China). Even if both parties have secure AIs, another might me buillding a misaligned one.
+Like a race through a minefield.
+Assumptions: Transformative AI soon, serious misalignment risk, and ambiguity (hard to know when models are aligned), cautious actors can ‘contain’ incautious actors, cautious actors use AI to help with ‘containment.’
+Cautious/Incautuous actors: actors (people developing AI) which take alignment risks seriously/not so seriously.
+Free markets and other incentives won’t (be enough to) ensure people do the right thing.
+(Proposed) ways cautious actors can act:
+Alignment research; building aligned/limited (no ambition) AIs, using AI to check and balance other AI, and digital neuroscience (identifying misalignment by ‘reading its mind’, instead of just monitoring outputs).
+Making AI systems safe enough (to commercialise) \neq robustly safe.
+Providing negative feedback for bad behaviour can cause deception (which will become evident when they are more powerful) instead of alignment.
+Threat assessment; measuring/demonstrating dangerous potential. Can promote actors to move more slowly/cautiously, or assure actors.
+Actors who want to go slow trade caution for competitiveness (companies, countries, etc.). Possible solutions include information sharing agreements, or standards and monitoring.
+Selective information sharing; awareness, safety information and risk mitigation techniques shared globally, but full details of AI capabilities (can motivate bad actors) and information about an AI’s weights (like the source code) kept private.
+It may be difficult for commercial companies to keep their systems safe from states.
+Global monitoring; identifying actors developing powerful, misaligned AI, and stopping them.
+Government regulations/international treaties/companies self-regulating (better for investment) may help.
+Countries may supervise other countries, like the US does with nuclear programmes, and accordingly sanction ([thought] possible war cause?)
+Defensive deployment; deploying powerful-and-safe AI (once confident) to do help with all of the above. Widespread use of AI will also identify (and help patch) security issues, and misaligned AI will have to compete with an aligned majority.
+Unfortunately, getting the balance of caution and speed is hard, and also optimistic. It requires people to care and decisipn-makers to be well informed and have trust.
+Even if AI alignment is easy, people may still not care (e.g. trying to maximise profits).
+[Opinion] current research projects should focus on starting to make progress in and consider the points above.
+[Opinion] governance should be established that prioritises the good of humanity over commercially-optimal decisions. Current legislation often favours shareholders.
+Article
+AI Governance Problem: similar to above, but for governments; ensuring safe frameworks that don’t significantly inhibit innovation.
+With a somewhat capable, goal-pursuing AI, even a minority of bad actors can cause catastrophe. There are many incentives for this:
+Misjudgement (not accurately judging whether a model is safe or not).
+‘Winner-take-all’ competition (companies would hence likely cut corners).
+Externalities (actors who deploy AI after cutting corners can recieve massive benefits, and add only a small fraction of global risk).
+Race to the bottom (race to deploy AI with cutting-corners, to avoid worse actors deploying first; value erosion).
+Delayed safety (time lag between developing capable AI and making it safe; high-risk period).
+Rapid diffusion of AI capabilities (after deployment of an unsafe AI, knowledge of how to build one will diffuse, so others may gain the same capability).
+The following are approaches to reduce this risk:
+Nonproliferation: Actors might (coordibate to) slow the diffusion of AI capabilities.
+Deterrance: Actors might (coordinate to) create disincentives (e.g. political, regulatory, economic, cultural) against deployment action that cause global risk.
+Assurance: Actors might credibly assure each other that they are not developing or deploying very risky AI.
+Awareness: Actors might help potential deployers be well-informed about risks.
+Sharing: AI developers might credibly commit to sharing the benefits and influence of AI (mitigating ‘winner-takes-all’)
+Speeding up safety: Actors might shorten (or eliminate) the period in which unsafe deployment is possible through technical work on safety.
+Guardrailing competition on AI (but over-centralisation can cause things such as AI-enabled authoritarianism).
+Why does everyone want to get there first? Can permenantly tilt political & economic landscape. Like nuclear weapons.
+Review
+13 Mar: AI Act passed by EU parliament; regulations, transparency and reporting obligations, and bans on certain applications (monitoring, etc.) Restrictive nature, met with resistance. +
+15 Mar: India drops plan to require government approval for launch of new AI models after investor and entrepreneur backlash. -
+20 Mar: French government fines Google €250m over use of copyrighted information. +
+21 Mar: UN General Assembly adapts unanimous (every country endorsed!) resolution promoting ‘safe, secure, and trustworthy’ AI. +
+May 11: UK AISI launches open-source tool for assessing AI models after investor safety. +
+May 21: UK and South Korea cohost AI safety summit in Seoul. ‘[attending] nations took another step forward by signing a letter of intent to establish a collaborative network of institutes.’ +
+May 27: China creates country’s largest-server state-backed investment fund to back its semiconductor industry (focus on scale, boosting AI capabilities). +-
+Jun 26: US NIST unveils voluntary framework to help organisations identify and mitigate GenAI risks. +
+Sep 13: US launches task force pre on AI data center infrastructure; competition with china? +-
+Sep 17: California governor signed three bills on AI and elections communications (deepfakes must be labelled, etc.)
+Sep 29: California governor vetoes expansive AI legislation (forced companies to do AI testing before public release and would’ve allowed lawsuits over AI-related harm). -
+Nov 14: European Commission AI Office releases first draft of Code of Practice for General-Purpose AI. +
+Nov 25: US launches international AI safety network with global partners + (mainly western powers). -
+[Personal Observation] According to https://epoch.ai/data/ai-models , training compute increases at about ~4.3x/year, yet page 72 of https://hai.stanford.edu/assets/files/hai_ai_index_report_2025.pdf says they predict energy efficiency improving 40% per year. Hence, energy used increases exponentially, at f(t) = (4.3^t)/(1.4^t) ≈ 3.1^t .
+Summary
+The AI Act classifies AI according to its risk: unacceptable (surveillance/manipulation is prohibited), high-risk (regulated), limited risk (users must be aware they’re interacting with AI), and minimal risk (e.g. spam filters - unregulated).
+Most obligations fall on providers of high-risk AI systems (that are in EU markets or where the output is used in the EU).
+Users are persons that deploy an AI systems in a professional capacity (not necessarily developers), and still have some obligations (if in EU or output used in EU).
+General-Purpose AI (GPAI) model providers must provide documentation, instructions, comply with Copyright, and publish a summary about the content used for training.
+Free and open licence GPAI providers need only comply with copyright and publish training data summary, unless they present a systemic risk.
+All providers of GPAI models that present systemic risk must conduct model evaluations, adversarial testing, ensure cybersecurity protections, and track and report serious incidents.
+The following AI systems are considered prohibited:
+Systems using subliminal, manipulative, or deceptive techniques to distort behaviour.
+Systems exploiting vulnerabilities (e.g. age, disability, socioeconomic circumstances)
+Systems using biometric information to infer sensitive attributes (race, political opinions, religious belief, etc.), except when filtering lawfully acquired datasets or when law enforcement categorises biometric data.
+Systems for social scoring.
+Systems for assessing the risk of an individual committing criminal offences based on profiling or personality traits, except when done by objective, variable facts directly linked to criminal activity.
+Compiling facial recognition databases (from scraping the internet/CCTV footage)
+Inferring emotions in workplaces or educational institutions, except for medical or safety reasons.
+‘Real-time’ remote biometric identification (RBI) in public places for law enforcement, except when searching for missing persons, serious crimes, or preventing a threat to life.
+RBI allowed when not using the tool would cause considerable harm. Police would have to complicit a fundamental rights impact assessment, register the system in the EU database (unless extremely urgent, provided that it’s done later) and obtain authorisation from a legal authority (unless urgent, where it can be requested up to 24 hours later).
+[Personal Observation] a lot of these laws are related to preventing authoritarian takeovers and promoting democracy and workers’ rights. Not a lot of legislation on other X/S-risks, and a lot of subjective language is used in except clauses which allows for a lot of wiggle room (e.g. ‘safety reasons’ in emotions in workplaces).
+
+(Optional) Articles (AI summaries)
+Open-sourcing AI models: making the AI code and model weights public.
+Points for:
+Can significantly boost research and innovation, allowing for high yield outcomes from people with low investment.
+Transparency helps interpretability, vulnerability inspection, and allows for others to help build safer versions.
+Promotes competition and reduces reliance on a handful of systems.
+However, emerging regulations (e.g. EU AI Act/US Executive Orders) risk imposing burdens on open-source developers; problematic for small teams/individuals, may slow down innovation.
+[Proposed solution] balanced regulation, addressing/mitigating real risks whilst still having an open ecosystem that accelerates progress.
+Points against:
+Anyone can download and modify open-source models, so safety features can be removed.
+Developers who release these models can’t easily control how they’re used (e.g. scams, deepfakes, biological threats, etc.). Ease of misuse makes them risky.
+[Proposed solutions] regulatory actions (e.g. pausing the release until safety standards are met, having licensing, introducing liability for misuse, etc.)
+
+AI LabSession Week 3
+Flatten a 2D grid into a 1D vector list. 
+Assign a value from 0 (black) to 255 (white) and normalise, as this helps the neural network learn more effectively.
+Each neurone is assigned a value, which is the weighted sum of previous neurones with weights.
+ReLU: if the number is negative, makes it 0, otherwise, keep it. This is because stacking layers is just applying multiple linear transformations, which can be described as one linear transformation. With ReLU, it introduces non-linearity, allowing the NN to learn more complex patterns.
+Two main parameters during training: epochs (how long), and learning rate (how much our network will change every step).
+Logins: output numbers from the last layer. Like scores. We normalise them using the softmax function (which converts logins to probabilities by exponentiating them (making them positive), and normalising them).
+The prediction is the one with the highest probability, picked using the argmax function.
+Logits could instead be used, but are useful for understanding confidence, detecting uncertainty, and training the network.
+Activations: the outputs of intermediate layers in the neural network. Mechanistic interpretability uses these to understand what each layer (and hence the NN) does.
+The higher the activation is in magnitude, the more the neurone reacts to the input it receives.
+We can treat activations (of a layer) as a dataset (a vector).
+A probe is a simple detector which we train on activations to detect whether a specific concept is represented.
+Probe steps: extract activations from a layer after passing many inputs, create new labels based on a concept (so output neurones aren’t 1-9, but does this have a loop?), train a simple classifier (loop = 1, no loop = 0), evaluate. If high accuracy, then we’ve discovered what the layer does!
+Probes use a simple classifier as it’s assumed (not always true) that the neural network breaks up data into linearly separable (split by a line) parts.
+Probes help us see which concepts are learnt, which layer does what, what each neurone does, and if information is accessible (i.e. organised and explicit or complex/isn’t there).
+It helps find biases, verify safety features, understand failures , and build confidence in deploying a model.
+
+
+Video
+Most voters don’t trust tech executives to regulate AI, and believe there should be a federal agency to do this.
+3-step regulation proposed: establish a registry of giant AI experiments maintained by a US federal agency, build a licensing system to ensure AI models are safe before deployment, ensure developers are legally liable for the harms their products cause.
+Video
+Idea for preventing an AI catastrophe: stop developing AI (past a certain point). Pause AI supports this (‘implement a temporary pause on powerful AGI until we know how to build them safely (alignment) AND keep them under democratic control.’)
+Proposed to be done through international regulations.
+Debated because:
+AGI risks are still largely hypothetical, therefore people don’t always trust them, or take them seriously.
+BUT by the time we get evidence, it might be too late.
+AI development may cause a positive feedback loop, speeding up AI development exponentially, and hence, we don’t have much time left before it gets out of hand.
+Smarter AI is harder to align (can deceive, etc.)
+Incentive to keep development of smarter AI, however (to help with medicine, more complex tasks, etc.)
+Adversarial selection: if responsible companies/countries slow down AI development, then the least responsible may achieve AGI first.
+Co-operation between rivals may be impossible; an arms race will likely occur as sides don’t trust each other.
+Pause AI say global co-operation is the answer.
+It is theorised that if all leaders are properly informed (‘if anyone builds it, everyone dies’), then no one will continue (unsafe) development.
+Nuclear proliferation-like situation. Hence, banning countries from developing advanced (unsafe) AI (like nukes) is a proposal.
+BUT someone will probably eventually figure out how to get past a ban, and they’ll likely not care much for safety (see above).
+‘If it’s possible, someone will do it.’
+Hence, Pause AI does not argue on a permanent pause, but a temporary one to buy researchers time to solve alignment.
+Model evals can help keep track of AI capabilities and highlight misalignment and risk (and serve as evidence for it).
+Evals can serve as early warning signals.
+AI data-centres need to have stellar cybersecurity (military grade) to stop nations, hackers, terrorists, and AI itself from hacking the system.
+
+Week 3 Lab Session Call
+Low risk: baby-steps, slow but steady, high-risk/learning rate: faster, but may not be on optimum.
+Training loss and test loss: we measure both to ensure that the data does not become overfitted to the data and generalises.
+Q: Can we optimise training rate?
+A: See singular value theory. Start with an arbitrary learning rate, and make it get smaller. First, take risks, and then, centre around the optimum. Learning rate can be a trainable parameter, but there’s an easier way: grid search (test different learning rates, and find the best one).
+Q: do we just test different hypotheses for probes?
+Q: idea? How?
+A: see steering vectors. Take activations for opposite concepts (sad and happy) subtract the activations, and find the direction that encodes the difference between happiness and sadness. This vector can be used to then steer things (e.g. toward happy). Confidence intervals? Interpretability on the lowest activating features.
+Probe is like a classifier.
+The model is finding the simplest way to differentiate the digits, hence breaking it up into loops, etc.
+Cons: linear probes assume data is linearly separable, e.g. polysemanticity might not be linearly separable
+Back propagation is an algorithm that allows models to learn stuff. Feed input through a model, and then use the output (compare it to the real output, and find the error rate) to train the model.
+Stochastic (g.d.) what if I don’t try and calculate the loss (function/error?) throughout the entire dataset, but through a localised part? Approximation of the loss error, but takes much less compute.
+See: data manifold, instead of being a vector, see it as points in a topological space. Data topology.
+
+Note: accountability of AI? See self-driving cars,
+
+##### Week 5 #####
+
+Video
+GDP per capita has seen an explosion only in the last few hundred years.
+Comparing this to the last 100,000 years (allegedly), MacAskill argues our ethical understanding of how to use these resources hasn’t caught up, and that we need an ethical revolution.
+Basis of EA: how can we do the most good?
+Framework: Importance = Bigger*Solvable*Neglectedness (neglectedness because of marginal value and diminishing returns).
+Main fields: global health (solvable), factory farming (neglected), X-risks (because of the tremendous scale).
+X-risks because of radical new technology which can pose serious dangers. Even if not likely, massive risk outweighs low probability.
+MacAskill also thinks problems involving future people are neglected; they have no say - undemocratic.
+Contribute with money, career,or political engagement.
+
+Article
+Uses research and quantitative methods to find the most pressing problems/best solutions.
+For each unit of effort, how can we make the most impact?
+[Adressing criticism that work is ‘unconventional]: most neglected problems will allow for more marginal value.
+AI alignment problem is very neglected, with 40,000 researchers helping acellerate AI, and only 300 working on the AI alignment problem (estimated, as of 2021).
+Explains risks of AI and how hence, from a longtermist perspective, it’s a very pressing issue (could cause X-risks).
+Solutions include mass ieducation, new institutes and new research labs.
+
+Quiz
+EA is both research, but also action - hand-in-hand and both important.
+
+Article (audio)
+Hard to know if your job is altruistic. Many companies promise altruism, but may be very inefficient, or secretly looking toward maximising profits.
+S.E.L.F. Framework proposed.
+S: significance (of the problem). The extent to which a problem causes harming, or goes against your values. In the best case, how much would it benefit the world if this problem is solved. Would it solve adjacent problems too?
+E: effectiveness. Is it efficient? Is it scalable? Method success rate? Has this method been tried before, and has it worked? How many resources (money & people) have been put into this? How successful have they been?
+L: leverage (your specific role in the problem). What does your role do, and how important is it? How much does it influence/contribute toward the problem? Would the organisation make progress without this role? Does it directly/indirectly contribute to fixing the problem?
+F: Fit (of strengths and interests). How likely are you to excell in and enjoy your role? Even an impactful job may not be well-suited if you don’t fit. Consider your: motivation for your problem/field/solution/workspace, minimum compensation, shedule, skill, colleauges.
+Role’s potential impact ≈ S*E*L*F.
+If any one factor seems very low, the role’s potential impact will likely be low too.
+
+Profile
+Mentions how a typo led to Clinton’s campaign team leaking emails, potentially losing the 2016 election.
+Stresses how information security is understaffed and very important to protect powerful assets from getting to bad actors.
+
+Article
+Suggests ‘aptitudes’ (skills/talents) to be developed for EA longtermists, instead of ‘paths’ suggested by 80,000 Hours.
+Other frameworks include causes and/or heuristics (‘do work you’re great at’ or ‘do work that builds career capital’).
+Information Security: keep information safe from unauthorised access and/or modification. Can be theoretical research, more practical research, or more decision based.
+Work at FAANG companies for security, and [personal opinion] your project!
+
+#########################==========#########################
+
+Spyridon Manolidis - leaf [at] manolidis [dot] me
+Febuary 2026
