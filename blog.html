@@ -1,197 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <!--Hey there, dis an Easter egg :D-->
-    <meta name="keywords" content="Spyridon, Manolidis, Spyros, ManolidisS, Maths, Mathematics, Physics, Altruism">
-    <meta name="author" content="Spyridon Manolidis">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="Stylesheet" type="text/css" href="style.css">
-    <title>Spyridon Manolidis</title>
-    <link rel="icon" type="image/x-icon" href="favicon.svg">
-    <script src="navbar.js"></script>
-    <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$']],
-          displayMath: [['$$', '$$']]
-        },
-        svg: { fontCache: 'global' }
-      };
-    </script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
-  <body>
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Blog – Spyridon Manolidis</title>
+<meta name="description" content="Notes on mathematics, physics and computation by Spyridon Manolidis.">
+<link rel="canonical" href="https://manolidis.me/blog.html">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="nav-home" href="index.html">S. Manolidis</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#writing">Research</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#awards">Awards</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a class="nav-blog" href="blog.html" aria-current="page">Blog</a>
+  </div>
+</nav>
+
+<header class="masthead masthead--compact">
+  <h1>Blog</h1>
+  <p class="tagline">
+    My journey, from projects to dreams.
     <br>
-    <nav>
-      <ul>
-        <a href="index.html" class="clearfix centre"><li>Home</li></a>
-        <li class="noBorder noMargin noPadding"></li>
-        <a href="aboutMe.html" class="clearfix centre"><li>About Me</li></a>
-        <li class="noBorder noMargin noPadding"></li>
-        <a href="portfolio.html" class="clearfix centre"><li>My Portfolio</li></a>
-        <li class="noBorder noMargin noPadding"></li>
-        <a href="blog.html" class="clearfix centre"><li>My Blog</li></a>
-        <li class="noBorder noMargin noPadding"></li>
-        <a href="https://www.linkedin.com/in/spyridon-manolidis" class="clearfix centre"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="20" height="20" focusable="false">
-          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
-        </svg></a>
-      </ul>
-    </nav>
-    <br>
-    <div class="content"><p>
-        I recently decided to start a blog. I figured this would be beneficial for me as it can enable me to see my personal growth, as well as showcase it to you, dear visitor!
-        <br>
-        I excpect to update this frequently, with posts ranging from altriusm to music competitions. I'll also showcase my growth as a mathematician and physicist. Enjoy :)
-        </p>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Felt cute, might delete later</h3><h6 style="text-align: right;">28/02/2026</h6></div>
-      <p>
-        Oh yeah - I have a website.
-        <br>
-        Just kidding ;) I didn't forget, I've just been very busy!
-        <br><br>
-        In the 2nd of January - 2 days after my last blog post - I decided to reapply to <a href="https://leaf.courses/">Leaf Courses</a>.
-        Applications had been open for a while (in fact I'd missed the priority deadline), and I wasn't planning to apply, but I decided to last minute as I was told the <a href="https://leaf.courses/dilemmas-and-dangers-in-ai">AI Course</a> also contains a lot of mathematics and would be well aligned for someone like me.
-        After applying, I wasn't really expecting anything - my expectations had been quite low after not not hearing back from <a href="https://www.non-trivial.org/">Non-Trivial</a>, and to be honest I was a bit disappointed to not get in on the second time, even though I put so much thought into my answers.
-        <br>
-        Well - I got in!
-        <br>
-        I have no clue how or why - maybe it was the <a href="https://doi.org/10.5281/zenodo.17021787">Electric Sheep Project</a> or just dumb luck - but I got in!
-        I was ecstatic, and I still am.
-        What followed was an incredible just-over-a-month-long course deep delving into AI.
-        I'm not going to go too deep into the specifics, but a (very) summarised list of some of the things I learnt about is given:
-        <ul class="rainbowFixList">
-          <li><a href="https://epoch.ai/data/ai-models">AI Expected Growth</a> and <a href="https://www.metaculus.com/">Forecasting</a> (using <a href="https://www.youtube.com/watch?v=jrU3o7wK23s">this tutorial</a>)</li>
-          <li><a href="https://www.alignmentforum.org/posts/FWvzwCDRgcjb9sigb">Agent Foundations</a></li>
-          <li><a href="https://arxiv.org/pdf/1606.06565">Scalable Oversight</a></li>
-          <li><a href="https://aisafety.info/questions/897J/">Iterated Amplification (and Model Distillation)</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Mechanistic_interpretability">Mechanistic Interpretability</a></li>
-          <li><a href="https://www.news.aakashg.com/p/ai-evals">AI Evals</a></li>
-          <li><a href="https://www.alignmentforum.org/posts/ceBpLHJDdCt3xfEok">Deployment Problems</a> and <a href="https://www.theguardian.com/technology/2023/oct/26/ai-artificial-intelligence-investment-boom">A Race to the Bottom</a></li>
-          <li>AI Policy like the <a href="https://artificialintelligenceact.eu/">EU AI Act</a></li>
+    I try to keep this page authentic and genuine – enjoy.
+  </p>
+</header>
+
+<main id="main">
+  <section id="posts" class="posts">
+
+  <!--
+    ══════════════════════════════════════════════════════════════════
+      TEMPLATE — copy this block for each post, newest at the top.
+
+      <details class="post" id="post-SLUG">
+        <summary>
+          <span class="when">DD/MM/YYYY</span>
+          <span class="post-title">Post title</span>
+        </summary>
+        <div class="post-body">
+
+          <p>First paragraph.</p>
+          <p>Second paragraph.</p>
+
+          <div class="files">
+            <div class="file"><a href="Files/thing.pdf">What the file is</a></div>
+            <div class="file"><a href="Files/photo.png">Description of photo</a></div>
+            <div class="file"><a href="https://github.com/ManolidisS/x" data-type="CODE">Repository</a></div>
+          </div>
+
+        </div>
+      </details>
+
+      id="post-SLUG" lets you link straight to one post: blog.html#post-SLUG
+      data-size="1.2 MB" on a .file shows the size after the label.
+      Add  open  to a <details> to have it expanded on load.
+    ══════════════════════════════════════════════════════════════════
+  -->
+
+    <details class="post" id="post-SLUG" open>
+      <summary>
+        <span class="when">28/02/2026</span>
+        <span class="post-title">Felt cute, might delete later</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          Oh yeah - I have a website.
           <br>
-          You can find some general notes I kept throughout the entire course <a href="Files/LeafNotes.txt" class="rainbowFix">here</a>.
-        </ul>
-        This prompted a few project ideas I wanted to work on after Leaf, and I actually applied to Non-Trivial with them (through Leaf, as they have a reference program).
-        <br>
-        I GOT IN (woohoo)!
-        <br>
-        I'm so grateful - genuinely, not just Linkedin waffle, honestly and fully - for these two incredible opportunities.
-        I won't fully explain my idea for now whilst I continue to develop it, but it links my newfound AI knowledge with my passion for mathematics (of course it does) in a rabbit-hole that I have recently dived into - <a href="https://en.wikipedia.org/wiki/Steganography" class="rainbowFix">Steganography</a>!
-        <br><br>
-        Sorry for not posting (he said into the sea of silence), it's just that this course has kept me really busy (and that's a good thing!)
-        <br>
-        I'm unbelivebly excited to get started on my idea, and I really want to see how it pans out...
-        <br>
-        Toodles!
-      </p>
-      <div class="file">
-        <a href="Files/LeafDDAI.pdf">Leaf Dangers and Dilemmas of AI 2026 Certificate</a>
+          Just kidding ;) I didn't forget, I've just been very busy!
+          <br><br>
+          In the 2nd of January - 2 days after my last blog post - I decided to reapply to <a href="https://leaf.courses/">Leaf Courses</a>.
+          Applications had been open for a while (in fact I'd missed the priority deadline), and I wasn't planning to apply, but I decided to last minute as I was told the <a href="https://leaf.courses/dilemmas-and-dangers-in-ai">AI Course</a> also contains a lot of mathematics and would be well aligned for someone like me.
+          After applying, I wasn't really expecting anything - my expectations had been quite low after not not hearing back from <a href="https://www.non-trivial.org/">Non-Trivial</a>, and to be honest I was a bit disappointed to not get in on the second time, even though I put so much thought into my answers.
+          <br>
+          Well - I got in!
+          <br>
+          I have no clue how or why - maybe it was the <a href="https://doi.org/10.5281/zenodo.17021787">Electric Sheep Project</a> or just dumb luck - but I got in!
+          I was ecstatic, and I still am.
+          What followed was an incredible just-over-a-month-long course deep delving into AI.
+          I'm not going to go too deep into the specifics, but a (very) summarised list of some of the things I learnt about is given:
+          <ul class="rainbowFixList">
+            <li><a href="https://epoch.ai/data/ai-models">AI Expected Growth</a> and <a href="https://www.metaculus.com/">Forecasting</a> (using <a href="https://www.youtube.com/watch?v=jrU3o7wK23s">this tutorial</a>)</li>
+            <li><a href="https://www.alignmentforum.org/posts/FWvzwCDRgcjb9sigb">Agent Foundations</a></li>
+            <li><a href="https://arxiv.org/pdf/1606.06565">Scalable Oversight</a></li>
+            <li><a href="https://aisafety.info/questions/897J/">Iterated Amplification (and Model Distillation)</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Mechanistic_interpretability">Mechanistic Interpretability</a></li>
+            <li><a href="https://www.news.aakashg.com/p/ai-evals">AI Evals</a></li>
+            <li><a href="https://www.alignmentforum.org/posts/ceBpLHJDdCt3xfEok">Deployment Problems</a> and <a href="https://www.theguardian.com/technology/2023/oct/26/ai-artificial-intelligence-investment-boom">A Race to the Bottom</a></li>
+            <li>AI Policy like the <a href="https://artificialintelligenceact.eu/">EU AI Act</a></li>
+            <br>
+            You can find some general notes I kept throughout the entire course <a href="Files/LeafNotes.txt" class="rainbowFix">here</a>.
+          </ul>
+          This prompted a few project ideas I wanted to work on after Leaf, and I actually applied to Non-Trivial with them (through Leaf, as they have a reference program).
+          <br>
+          I GOT IN (woohoo)!
+          <br>
+          I'm so grateful - genuinely, not just Linkedin waffle, honestly and fully - for these two incredible opportunities.
+          I won't fully explain my idea for now whilst I continue to develop it, but it links my newfound AI knowledge with my passion for mathematics (of course it does) in a rabbit-hole that I have recently dived into - <a href="https://en.wikipedia.org/wiki/Steganography" class="rainbowFix">Steganography</a>!
+          <br><br>
+          Sorry for not posting (he said into the sea of silence), it's just that this course has kept me really busy (and that's a good thing!)
+          <br>
+          I'm unbelivebly excited to get started on my idea, and I really want to see how it pans out...
+          <br>
+          Toodles!
+        </p>
+        <div class="files">
+          <div class="file"><a href="Files/LeafDDAI.pdf">Leaf Dangers and Dilemmas of AI 2026 Certificate</a></div>
+        </div>
       </div>
-      <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>To the moon!</h3><h6 style="text-align: right;">31/12/2025</h6></div>
+    </details>
+
+    <details class="post" id="post-31122025">
+      <summary>
+        <span class="when">31/12/2025</span>
+        <span class="post-title">To the moon!</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          Alright, alright, I'll admit - I should've posted a blog post earlier, but I've had quite a busy season and I'm ecstatic to blog about what I've done…
+          <br>
+          Before I get into anything, I hope my (hopefully $\gt 0$) frequent reader(s) and anyone who is reading this had a Merry Christmas and I wish you a very happy new year!
+          <br>
+          Okay, now let's get into it! I'll start by ranting about my mocks, which I sat earlier this month…
+          <br><br>
+          This mock season was a bit of a wakeup call. Contrary to Year 10, I have many more examinations to prepare for and my hectic timetable really spotlighted that. I did the usual revision, going through my books, trying to do active recall, but this season I really put a lot of focus on past papers. I basically just did as many past papers as possible in small segments at random points throughout the day, and it might've worked!
+          <br>
+          I say might because with the results that I was given so far, I did (in my opinion) quite well and I'm very proud! For example, in Chemistry I got $98%$ (whatttttt!!!) and in Computer Science I got $100%$ (double whattttttt!!!). Both are some of my strongest subjects, but I usually only get these scores in maths (which, for the record, is still my favourite subject). The only thing is that after both of these examinations, I had a good feeling - like I knew I was going to do well. Well, in my Music appraising and my Biology exam, two subjects which I have yet to get my results, I did not have this feeling (uh oh)…
+          <br>
+          Oh well, no worrying can change this! I'll just have to wait and see, and if I don't do as well, try a different revision method! Oh yeah, speaking of maths…
+          <br><br>
+          I sat my entire GCSE Numeracy and Mathematics examinations in November. To keep it short, they went very well. Aside from one question in my Numeracy Unit 1 where I didn't check the units, and one question in Mathematics Unit 2 where I clicked square instead of cube on my calculator (*breathe in* *breathe out*), I was pretty confident.
+          <br>
+          Also, in one question I got to use the Principle of Inclusion-Exclusion, so that was pretty neat!
+          <br><br>
+          I also did the <a href="https://berkeley.mt/events/bmt-2025-online/">Berkeley Maths Tournament (Online)</a> with a couple of friends, and we formed a team called the Cardiff Maths Dragons!
+          <br>
+          We didn't intend to participate seriously, and a lot of us already had a lot of things booked and timetable conflicts. Even so, we were able to find a few hours that were good for all of us and work together - it was an incredible experience!
+          <br>
+          This year's theme was knots and Knot Theory. Not only was it interesting, but I found that it helped our team work really well together. For example, one of my friends was really good at visuallising knots and unfolding them, and another member could solve some really challenging questions with lightning speed! I uh… Well I think I helped too on a fair amount of the questions, and although I was disappointed with my progress on some, I actually had some good insight on a few (see below, Q 2.7 (which got full marks whey!)).
+          <br>
+          I'm still thinking of which competition we'll do next, Stanford? Harvard-MIT? Whatever it is, I know we'll smash it!
+          <br><br>
+          My family's getting ready to go out for the New Year, so I need to write this really quickly!
+          <br>
+          I sat the <a href="https://web.evanchen.cc/usemo.html">USEMO</a> recently, which is meant to be an Olympiad close to IMO level.
+          <br>
+          As expected, I scored 0, but I really wasn't doing it to do well in it, I just wanted some exposure and to try something new, and it was really nice, with very interesting problems! I'm planning to take it again next year, and who knows - maybe I'll score a score $x$ s.t. $x\gt 0$ (hopefully)!
+          <br>
+          I've linked below two solutions, which although got 0 points because the deductions made were 'trivial' - I am still somewhat proud of.
+          <br><br>
+          A lot of these competitions have been just for fun, and not something I've taken very seriously. However, I am trying to do well on the <a href=“https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge”>Maclaurin Olympiad</a>.
+          <br>
+          Whilst, as mentioned in the previous blog posts, I would work through books like EGMO and the AoPS (both of which I will continue working through), I think I'm going to, for these next 2/3 months until the Olympiad, put a lot more focus on the UKMT books such as <a href=“https://ukmt.org.uk/product/a-problem-solvers-handbook”>A Problem Solver's Handbook</a> and <a href=“https://ukmt.org.uk/product/a-mathematical-olympiad-primer-2nd-edition”>A Mathematical Olympiad Primer</a>, since they are books specifically for the UK Olympiads. I have so far been working quite vigorously through them, so we'll see where that takes me!
+          <br><br>
+          Lastly, I've really wanted to gain work experience (in my Easter/Summer holidays) at another startup, something hopefully that is high impact and that I can make a valuable difference towards. I might mention this in my upcoming posts, as right now it's still a thought at the back of my mind…
+          <br><br>
+          Well, after writing this entire post quickly on an iPad whilst my family nags me to hurry up, I think I really have to go!
+          <br>
+          Happy new year and see you next time!
+        </p>
+        <div class="files">
+          <div class="file"><a href="Files/BMTOnline2025-2_7.pdf">(Berkeley) Question 2.7 Solution</a></div>
+          <div class="file"><a href="https://cdn.artofproblemsolving.com/contests/137/5272/id-1134561-round-1-problem-1-9a060fd9e3587f2e263f2cf76c547786a476f03c.pdf">(USEMO) Work on Question 1</a></div>
+          <div class="file"><a href="https://cdn.artofproblemsolving.com/contests/137/5275/id-1134561-round-2-problem-4-7cb9dce367dabe48d7964409938b0a3f12c9dec0.pdf">(USEMO) Work on Question 4</a></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="post" id="post-31102025">
+      <summary>
+        <span class="when">31/10/2025</span>
+        <span class="post-title">The Phantom of the Opera is here...</span>
+      </summary>
+      <div class="post-body">
       <p>
-        Alright, alright, I'll admit - I should've posted a blog post earlier, but I've had quite a busy season and I'm ecstatic to blog about what I've done…
+        Oooooooooooo. it's the alleged spooky season!
+        Unfortunately, it's also the end of my half-term. My 'busy-ness' levels have fluctuated over the last few weeks, so here is a rundown of what has happened...
         <br>
-        Before I get into anything, I hope my (hopefully $\gt 0$) frequent reader(s) and anyone who is reading this had a Merry Christmas and I wish you a very happy new year!
-        <br>
-        Okay, now let's get into it! I'll start by ranting about my mocks, which I sat earlier this month…
+        Upcoming maths GCSE and revision.
+        It's pretty much what it says on the tin!
+        I have my maths GCSEs (Numeracy & Mathematics) upcoming, and my teachers have pushed for past papers to be done weekly, as well as revision in school.
+        I have tried helping and tutoring a few people, and at first I was a terrible teacher (someone asked me why we use $\sin^{-1}(x)$ to solve $\sin(x)=0.5$, and I started rambling about inverse functions and Group Theory and 'fun facts' like how we use inverses such as the multiplicative inverse for division), but eventually, I started explaining things better with more intuitive analogies.
+        I still have much more room for growth, but I'm happy with my improvement.
         <br><br>
-        This mock season was a bit of a wakeup call. Contrary to Year 10, I have many more examinations to prepare for and my hectic timetable really spotlighted that. I did the usual revision, going through my books, trying to do active recall, but this season I really put a lot of focus on past papers. I basically just did as many past papers as possible in small segments at random points throughout the day, and it might've worked!
-        <br>
-        I say might because with the results that I was given so far, I did (in my opinion) quite well and I'm very proud! For example, in Chemistry I got $98%$ (whatttttt!!!) and in Computer Science I got $100%$ (double whattttttt!!!). Both are some of my strongest subjects, but I usually only get these scores in maths (which, for the record, is still my favourite subject). The only thing is that after both of these examinations, I had a good feeling - like I knew I was going to do well. Well, in my Music appraising and my Biology exam, two subjects which I have yet to get my results, I did not have this feeling (uh oh)…
-        <br>
-        Oh well, no worrying can change this! I'll just have to wait and see, and if I don't do as well, try a different revision method! Oh yeah, speaking of maths…
+        I also performed in the school show! I performed Czardas by V. Monti for my school production (I was the violinist who won the competition in the show!).
+        My performance was so-so, with the Tuesday and matinee being a bit scruffy, but I was really really proud of Wednesday's performance!
+        One of my teachers also took an awesome photo, but for privacy reasons I won't post it ;).
         <br><br>
-        I sat my entire GCSE Numeracy and Mathematics examinations in November. To keep it short, they went very well. Aside from one question in my Numeracy Unit 1 where I didn't check the units, and one question in Mathematics Unit 2 where I clicked square instead of cube on my calculator (*breathe in* *breathe out*), I was pretty confident.
+        Next, this weekend I sat <a href="https://web.evanchen.cc/usemo.html">USEMO</a>.
+        It was, uh... It was something.
+        I knew it was going to be way above my level, especially considering it was labelled 'IMO level,' but wow.
+        My goal is literally to get 1 point - 1 point and I'll be happy!
         <br>
-        Also, in one question I got to use the Principle of Inclusion-Exclusion, so that was pretty neat!
+        It was a nice experience though, and it got me thinking about problems from different angles.
+        It also taught me good exam technique and strategy, so I really can't complain!
+        <br>
+        For the first problem, I actually may have made the tiniest bit of progress, and I was able to write a full page about it.
+        For the second and fourth problems, I just stated Ceva's theorem and Bézout's Theorem, respectively, hoping that the rest would somehow become trivial (it didn't).
         <br><br>
-        I also did the <a href="https://berkeley.mt/events/bmt-2025-online/">Berkeley Maths Tournament (Online)</a> with a couple of friends, and we formed a team called the Cardiff Maths Dragons!
-        <br>
-        We didn't intend to participate seriously, and a lot of us already had a lot of things booked and timetable conflicts. Even so, we were able to find a few hours that were good for all of us and work together - it was an incredible experience!
-        <br>
-        This year's theme was knots and Knot Theory. Not only was it interesting, but I found that it helped our team work really well together. For example, one of my friends was really good at visuallising knots and unfolding them, and another member could solve some really challenging questions with lightning speed! I uh… Well I think I helped too on a fair amount of the questions, and although I was disappointed with my progress on some, I actually had some good insight on a few (see below, Q 2.7 (which got full marks whey!)).
-        <br>
-        I'm still thinking of which competition we'll do next, Stanford? Harvard-MIT? Whatever it is, I know we'll smash it!
-        <br><br>
-        My family's getting ready to go out for the New Year, so I need to write this really quickly!
-        <br>
-        I sat the <a href="https://web.evanchen.cc/usemo.html">USEMO</a> recently, which is meant to be an Olympiad close to IMO level.
-        <br>
-        As expected, I scored 0, but I really wasn't doing it to do well in it, I just wanted some exposure and to try something new, and it was really nice, with very interesting problems! I'm planning to take it again next year, and who knows - maybe I'll score a score $x$ s.t. $x\gt 0$ (hopefully)!
-        <br>
-        I've linked below two solutions, which although got 0 points because the deductions made were 'trivial' - I am still somewhat proud of.
-        <br><br>
-        A lot of these competitions have been just for fun, and not something I've taken very seriously. However, I am trying to do well on the <a href=“https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge”>Maclaurin Olympiad</a>.
-        <br>
-        Whilst, as mentioned in the previous blog posts, I would work through books like EGMO and the AoPS (both of which I will continue working through), I think I'm going to, for these next 2/3 months until the Olympiad, put a lot more focus on the UKMT books such as <a href=“https://ukmt.org.uk/product/a-problem-solvers-handbook”>A Problem Solver's Handbook</a> and <a href=“https://ukmt.org.uk/product/a-mathematical-olympiad-primer-2nd-edition”>A Mathematical Olympiad Primer</a>, since they are books specifically for the UK Olympiads. I have so far been working quite vigorously through them, so we'll see where that takes me!
-        <br><br>
-        Lastly, I've really wanted to gain work experience (in my Easter/Summer holidays) at another startup, something hopefully that is high impact and that I can make a valuable difference towards. I might mention this in my upcoming posts, as right now it's still a thought at the back of my mind…
-        <br><br>
-        Well, after writing this entire post quickly on an iPad whilst my family nags me to hurry up, I think I really have to go!
-        <br>
-        Happy new year and see you next time!
+        For the rest of this week, I've mostly relaxed by playing games and watching my favourite show, and I also finally finished the first chapter of <a href="https://web.evanchen.cc/geombook.html">EGMO</a>!
+        I was also able to solve an Olympiad problem from the book for the first time without hints, and I've left the question and solution below:
+        <blockquote cite="https://www.bamo.org/archives/examfiles/bamo99draft.pdf"> Let $C$ be a circle in the $xy$-plane with center on the $y$-axis and passing through $A = (0,a)$ and $B = (0,b)$, with $0 < a < b$. Let $P$ be any other point on the circle, let $Q$ be the intersection of the line through $P$ and $A$ with the $x$-axis, and let $O = (0,0)$. Prove that $\angle \text{BQP}$ = $\angle \text{BOP}$. ~Bay Area Mathematical Olympiad 1992: Question 2.</blockquote>
+        <blockquote>$\angle \text{BQP}$ = $\angle \text{BOP}\iff\text{OPBQ}$ is a cyclic quadrilateral. Let $\angle \text{PBA} = x$. Because $P$ lies on the given circle, $\angle APB = 90^{\circ}$,  $\therefore\triangle\text{APB}$ is right $\implies\angle\text{PAB}$ $=180^{\circ}-90^{\circ}-x$ $=90^{\circ}-x$. By vertical angles, $\angle\text{OAQ}=90^{\circ}-x$. $\angle\text{QOA}=90^{\circ}$, because $x\text{-axis}\perp y\text{-axis}$. Hence, $\triangle\text{OAQ}$ is also right. $\therefore\angle\text{OQA}$ $=180^{\circ}-90^{\circ}-(90^{\circ}-x)$ $=x$. $P$ lies on $\overline{QA}$, by definition.  $\therefore\angle\text{OQA}$ $=\angle\text{OQP}=x$. $O$ lies on $\overline{AB}$, $\therefore\angle\text{PBA}$ $=\angle\text{PBO}=x$. Hence, $\angle\text{PQO}$ $=\angle\text{PBO}\iff\text{OPBQ}$ is a cyclic quadrilateral. $\therefore\angle\text{BQP}$ $=\angle\text{BOP}$.$$\text{Q.E.D.}\hspace{.33cm} O.E.\Delta .$$</blockquote>
+        I'm locking in!
+        I've also got a lot of applications and things to fill out, and I'm starting school again in a few days.
+        Here's to another great month!
       </p>
-      <div class="file">
-        <a href="Files/BMTOnline2025-2_7.pdf">(Berkeley) Question 2.7 Solution</a>
-      </div>
-      <div class="file">
-        <a href="https://cdn.artofproblemsolving.com/contests/137/5272/id-1134561-round-1-problem-1-9a060fd9e3587f2e263f2cf76c547786a476f03c.pdf">(USEMO) Work on Question 1</a>
-      </div>
-      <div class="file">
-        <a href="https://cdn.artofproblemsolving.com/contests/137/5275/id-1134561-round-2-problem-4-7cb9dce367dabe48d7964409938b0a3f12c9dec0.pdf">(USEMO) Work on Question 4</a>
-      </div>
-      <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>The Phantom of the Opera is here...</h3><h6 style="text-align: right;">31/10/2025</h6></div>
-    <p>
-      Oooooooooooo. it's the alleged spooky season!
-      Unfortunately, it's also the end of my half-term. My 'busy-ness' levels have fluctuated over the last few weeks, so here is a rundown of what has happened...
-      <br>
-      Upcoming maths GCSE and revision.
-      It's pretty much what it says on the tin!
-      I have my maths GCSEs (Numeracy & Mathematics) upcoming, and my teachers have pushed for past papers to be done weekly, as well as revision in school.
-      I have tried helping and tutoring a few people, and at first I was a terrible teacher (someone asked me why we use $\sin^{-1}(x)$ to solve $\sin(x)=0.5$, and I started rambling about inverse functions and Group Theory and 'fun facts' like how we use inverses such as the multiplicative inverse for division), but eventually, I started explaining things better with more intuitive analogies.
-      I still have much more room for growth, but I'm happy with my improvement.
-      <br><br>
-      I also performed in the school show! I performed Czardas by V. Monti for my school production (I was the violinist who won the competition in the show!).
-      My performance was so-so, with the Tuesday and matinee being a bit scruffy, but I was really really proud of Wednesday's performance!
-      One of my teachers also took an awesome photo, but for privacy reasons I won't post it ;).
-      <br><br>
-      Next, this weekend I sat <a href="https://web.evanchen.cc/usemo.html">USEMO</a>.
-      It was, uh... It was something.
-      I knew it was going to be way above my level, especially considering it was labelled 'IMO level,' but wow.
-      My goal is literally to get 1 point - 1 point and I'll be happy!
-      <br>
-      It was a nice experience though, and it got me thinking about problems from different angles.
-      It also taught me good exam technique and strategy, so I really can't complain!
-      <br>
-      For the first problem, I actually may have made the tiniest bit of progress, and I was able to write a full page about it.
-      For the second and fourth problems, I just stated Ceva's theorem and Bézout's Theorem, respectively, hoping that the rest would somehow become trivial (it didn't).
-      <br><br>
-      For the rest of this week, I've mostly relaxed by playing games and watching my favourite show, and I also finally finished the first chapter of <a href="https://web.evanchen.cc/geombook.html">EGMO</a>!
-      I was also able to solve an Olympiad problem from the book for the first time without hints, and I've left the question and solution below:
-      <blockquote cite="https://www.bamo.org/archives/examfiles/bamo99draft.pdf"> Let $C$ be a circle in the $xy$-plane with center on the $y$-axis and passing through $A = (0,a)$ and $B = (0,b)$, with $0 < a < b$. Let $P$ be any other point on the circle, let $Q$ be the intersection of the line through $P$ and $A$ with the $x$-axis, and let $O = (0,0)$. Prove that $\angle \text{BQP}$ = $\angle \text{BOP}$. ~Bay Area Mathematical Olympiad 1992: Question 2.</blockquote>
-      <blockquote>$\angle \text{BQP}$ = $\angle \text{BOP}\iff\text{OPBQ}$ is a cyclic quadrilateral. Let $\angle \text{PBA} = x$. Because $P$ lies on the given circle, $\angle APB = 90^{\circ}$,  $\therefore\triangle\text{APB}$ is right $\implies\angle\text{PAB}$ $=180^{\circ}-90^{\circ}-x$ $=90^{\circ}-x$. By vertical angles, $\angle\text{OAQ}=90^{\circ}-x$. $\angle\text{QOA}=90^{\circ}$, because $x\text{-axis}\perp y\text{-axis}$. Hence, $\triangle\text{OAQ}$ is also right. $\therefore\angle\text{OQA}$ $=180^{\circ}-90^{\circ}-(90^{\circ}-x)$ $=x$. $P$ lies on $\overline{QA}$, by definition.  $\therefore\angle\text{OQA}$ $=\angle\text{OQP}=x$. $O$ lies on $\overline{AB}$, $\therefore\angle\text{PBA}$ $=\angle\text{PBO}=x$. Hence, $\angle\text{PQO}$ $=\angle\text{PBO}\iff\text{OPBQ}$ is a cyclic quadrilateral. $\therefore\angle\text{BQP}$ $=\angle\text{BOP}$.$$\text{Q.E.D.}\hspace{.33cm} O.E.\Delta .$$</blockquote>
-      I'm locking in!
-      I've also got a lot of applications and things to fill out, and I'm starting school again in a few days.
-      Here's to another great month!
-    </p>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Autumn already?</h3><h6 style="text-align: right;">20/09/2025</h6></div>
+    </details>
+
+    <details class="post" id="post-20092025">
+      <summary>
+        <span class="when">20/09/2025</span>
+        <span class="post-title">Autumn already?</span>
+      </summary>
+      <div class="post-body">
       <p>
         It was a terrible night, such a night as is only possible when we are in the heart of a cold, bleak autumn, dear reader.
         <br>
@@ -240,9 +277,14 @@
         <br><br>
         It's a short one today, see you next time!
       </p>
-    </div>
-    <br>
-    <div class="content" id="202508RWS"><div class="blog-title"><h3>Results & A Wonderful Summer</h3><h6 style="text-align: right;">25/08/2025</h6></div>
+    </details>
+
+    <details class="post" id="post-25082025">
+      <summary>
+        <span class="when">25/08/2025</span>
+        <span class="post-title">Results & A Wonderful Summer</span>
+      </summary>
+      <div class="post-body">
       <p>
         Wow - that was quick!
         I know I say this with practically every blog post, but these summer holidays have absolutely flown by, and now suddenly we're entering the back-to-school season already.
@@ -319,351 +361,371 @@
         <br>
         Also, I forgot to mention that Leaf's Course also taught be about the SIR model for epidemiology, which was particularly useful as it was directly related to my Electric Sheep project - everything is connected!
       </p>
-      <div class="file">
-        <a href="Files/GCSEResults2025.png">GCSE Results (2025)</a>
+        <div class="files">
+          <div class="file"><a href="Files/GCSEResults2025.png">GCSE Results (2025)</a></div>
+          <div class="file"><a href="Files/LeafCourseProof.png">Leaf's Mathematics of Morality Course (Proof of completion)</a></div>
+          <div class="file"><a href="Files/A_Proposal_to_Use_Precision_Livestock_Farming_for_Epidemiology__Original.pdf">A Proposal to Use Precision Livestock Farming for Epidemiology (Futurekind Fellowship Project)</a></div>
+          <div class="file"><a href="https://www.electricsheep.is/futurekind-fellowship-certificate-of-completion-spyridon-manolidis" data-type="WEBPAGE">Futurekind Fellowship Certificate</a></div>
+          <div class="file"><a href="Files/ButeEnergyTimetable.png">Bute Energy Timetable</a></div>
+        </div>
       </div>
-      <div class="file">
-        <a href="Files/LeafCourseProof.png">Leaf's Mathematics of Morality Course (Proof of completion)</a>
-      </div>
-      <div class="file">
-        <a href="Files/A_Proposal_to_Use_Precision_Livestock_Farming_for_Epidemiology__Original.pdf">A Proposal to Use Precision Livestock Farming for Epidemiology (Futurekind Fellowship Project)</a>
-      </div>
-      <div class="file">
-        <a href="https://www.electricsheep.is/futurekind-fellowship-certificate-of-completion-spyridon-manolidis">Futurekind Fellowship Certificate</a>
-      </div>
-      <div class="file">
-        <a href="Files/ButeEnergyTimetable.png">Bute Energy Timetable</a>
-      </div>
-      <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Summer!</h3><h6 style="text-align: right;">05/08/2025</h6></div>
-    <p>
-      At last it's summer!
-      <br>
-      I've done lots of things since my last blog post, and I didn't really get around to writing a new one until now.
-      But now it's summer and I have plenty of time on my hands, so I've finally been able to come back to this.
-      I don't think anyone actually reads this, but it's still nice to be able to reflect on the things I've done throughout the past months and keep my goals in one place.
-      Well, here goes nothing...
-      <br><br>
-      First and foremost, I sat some of my GCSE examinations.
-      Particularly, I sat my Unit 1 Exams for all my Sciences, a religous studies exam as well as my entire Greek GCSE.
-      I also sat my B1 Greek Examination.
-      <br>
-      The B1 Greek Examination went really well, I got my results a few days ago (although I'm still waiting for the official certificate) and I got the mark of άριστα (excellent) - hooray!
-      I was born in Greece, but because I left from a young age my Greek started to decline as I was growing up, to the point where I couldn't even spell 'hello' properly (I know it's γεια now, but we have so many letters for the'i' sound (ι, η, υ, ει, οι), so it gets confusing).
-      But luckly my teacher and my parents have pushed me and I have made progress in the last few years, of which I am very proud of.
-      I haven't got my Greek GCSE result back yet, but I have a (mostly) good feeling.
-      As for my other GCSEs, well - I have mixed opinions...
-      <ul>
-        <li><b>Biology</b> - This exam went quite well.
-            Biology was one of my weakest subjects and I studied so much that it definetly paid off.
-            I felt a lot of the questions were similar to those from past papers, so I think it was a great paper and I expect good results.</li>
-        <li><b>Chemistry</b> - This exam went really well.
-            I revised each topic thoroughly (although not as much as Biology), and the exam paper was awesome.
-            It tested me on my strongest topics, and the 6-marker was on chromatography (which is what I had in one of my unit tests).
-            I am really confident that I'll get good results for this.
-        </li>
-        <li><b>Physics.</b>
-          After two incredible papers, I shouldn't have expected mercy.
-          OK OK, I'm overeacting - but I found physics a lot harder than the other papers, which was a surprise as physics is one of my strong sciences, and the one I am most passionate about.
-          To be completely honest, the paper didn't go that bad, it's just that the last question threw me off.
-          It was a quite simple 2/3 marker to do with proportionality, but I overcomplicated it.
-          This isn't what annoys me though - it's the fact that, after overcomplicating it and creating a giant mathematical derivation, I got it right.
-          But the answer looked weird to me, so I crossed it out and put a completely incorrect one.
+    </details>
+  
+    <details class="post" id="post-05082025">
+      <summary>
+        <span class="when">05/08/2025</span>
+        <span class="post-title">Summer!</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          At last it's summer!
           <br>
-          Overall it wasn't that bad a paper, and the grade boundaries for an A* are usually just about 50%.
-          However, I can't help but be annoyed at myself - I got those 3 marks after all that effort, and then crossed it out because it 'looked slightly off.'
+          I've done lots of things since my last blog post, and I didn't really get around to writing a new one until now.
+          But now it's summer and I have plenty of time on my hands, so I've finally been able to come back to this.
+          I don't think anyone actually reads this, but it's still nice to be able to reflect on the things I've done throughout the past months and keep my goals in one place.
+          Well, here goes nothing...
+          <br><br>
+          First and foremost, I sat some of my GCSE examinations.
+          Particularly, I sat my Unit 1 Exams for all my Sciences, a religous studies exam as well as my entire Greek GCSE.
+          I also sat my B1 Greek Examination.
           <br>
-          It's OK... deep breath... move on...
-        </li>
-        <li><b>Religous Studies</b> - well enough.
-          I think my problem with this one is that I was more focused on including keywords rather than ellaborating ideas.
-          Especially for the 15-markers, I had so many Jewish words memorised that I just began writing about almost everything.
-          That's not to say I hadn't revised or that some valid points were made, but I feel like I will be penalised on some of the longer questions because I made lots of little points rather than a few big points.
-          However, it was still a nice paper and I managed to do really well (I think) on a very nasty question (interfaith), including lots of organisations (Interfaith Council of Wales, Christian-Muslim Forum, Council of Christians and Jews, Ecumenism, etc.) for a coherent and confident answer.
-        </li>
-      </ul>
-      As you may have noticed, I have a tendency to overexaggerate my flaws and mistakes, but I hope that shows that I care.
-      To tell the truth, GCSE season went really well - I'm lucky to have such amazing teachers to support me and we'll see how my effort pays out on results day...
-      <br><br>
-      Now for some exciting news... I got elected to be head boy!
-      <br>
-      It is a spectacular privilege and honour to have the backing of my teachers and to be elected for such a role.
-      I already love to speak publicly, and this role will give me the chance to further develop my speaking skills, as well as my teamwork and leadership skills.
-      Furthermore, I also get the benefit of further represnting my school in concerns and liturgies.
-      Most importantly, I get the chance to improve my school.
-      I get to gather and collect my classmates' suggestions, presenting them to teachers and hopefully making a positive, lasting impact on my school.
-      <br>
-      Also, perhaps I can combine my leadership role with my interest in mathematics.
-      I'm thinking of making a school-specific math/general-logic Olympiad to reveal to my peers the fascinating worlds of Game Theory, Number Theory, and more.
-      As of now, this is just a thought at the back of my mind, but we will see...
-      <br><br>
-      In other news, I've been working hard on my <a href="https://electricsheep.teachable.com/">Electric Sheep Futurekind AI Fellowship</a> project, involving epidemiology and graph theory.
-      The due date is in 5 days so I get to keep the suspense up for a little while longer, but I'm really excited to share my proposal with the entire community!
-      I've also been working on <a href="https://www.leaf.courses/">Leaf's</a> 'Morality of Mathematics' course, learning about really interesting things such as <a href="https://en.wikipedia.org/wiki/Long_tail">Long-tailed Events</a> and <a href="https://en.wikipedia.org/wiki/Pareto_principle">The 80/20 Rule</a>, and I hope to have that finished over the coming weeks.
-      <br>
-      <i>(I'm keeping these comments short so that I can write about my experience fully once I've finished, rather than in short and spread-out statements. Stay tuned for another blog post soon!)</i>
-      <br>
-      I've also got work experience coming up with <a href="https://bute.energy/">Bute Energy</a>.
-      They're a renewable energy company - so I'm REALLY eager to work with them on such a pressing issue, but again, I'll share my experience afterwards.
-      Until then, I'd like to talk about a new interest...
-      <br><br>
-      <b>Olympiads!</b> If you've read the last few blog posts, this is not new.
-      However, the length to which I do them and focus on them has completely changed.
-      So far, my mathematics journey has just been focused on doing further and more complex topics in the curriculum.
-      But the curriculum and its resources can sometimes be flawed - their purpose is not necessarily to teach students mathematics, but to teach them the skills to pass tests.
-      That's not to say it doesn't teach some advanced and interesting topics, but it doesn't devle deep enough into them for my liking.
-      Also, Olympiad questions are on another level.
-      I can't do many yet, but the elegance and logic that you require to do many of them, even though they might require more elementary mathematics, makes them more interesting to me.
-      <br>
-      Hence, I've been pulled deeper into the Olympiad/Competitive mathematics pipeline, and I've found lots of wonderful books to help me on my journey.
-      Notably,
-      <ol>
-        <li><b>Art of Problem Solving: The Basics Volumes <a href="https://artofproblemsolving.com/store/book/aops-vol1">1</a> & <a href="https://artofproblemsolving.com/store/book/aops-vol2">2</a>. </b>This book has so far proved unmatched in nurturing my mathematical upbringing, with simple explainations, intuitive steps and elegant solutions.
-        I hope to finish Volume 1 by September and Volume 2 by December.</li>
-        <li><b><a href="https://web.evanchen.cc/geombook.html">Euclidean Geomtry in Mathematical Olympiads</a>. </b>This book is harder than the AoPS books, but even the few pages I've so far read offer great insight.
-        I hope to fully start this book by the new year.</li>
-        <li><b><a href="https://math.univ-lyon1.fr/~ducatez/content/Modern_Olympiad_TN.pdf">Modern Olympiad Number Theory</a>. </b>Similar to the above, offers great insight but into a field which I am becoming ever more passionate about: Number Theory.
-        I hope to properly start reading this book in the new year.</li>
-        <li><b><a href="https://ia800800.us.archive.org/32/items/olympiad-combinatorics/Olympiad_Combinatorics.pdf">Olympiad Combinatorics</a>. </b>Combinatorics is perhaps my weakest topic right now, and it looks very intimidating.
-        But, just like with anything, with enough effort I'm sure I can overcome it!
-        Once again, the priority is to finish the AoPS book, so I hope to start this in the new year.</li>
-      </ol>
-      There are a few extra books (e.g. <a href="https://www.isinj.com/mt-usamo/Math%20Olympiad%20Dark%20Arts%20-%20Goucher%20(2012).pdf">The Olympiad Dark Arts</a>) which are way above my level that I still like to ocasionally flip through and stare at in awe.
-      Once I finish the AoPS I am also looking to start reading handouts, such as those by <a href="https://yufeizhao.com/olympiad/">Yufei Zhao</a>, and <a href="https://web.evanchen.cc/excerpts.html">OTIS by Evan Chen</a>.
-      I also signed up to do <a href="https://ukmt.org.uk/olympiad-mentoring-scheme">UKMT's Olympiad Mentoing Scheme</a> - I can't wait!
-      In the long term, I might also sign up to do <a href="https://web.evanchen.cc/otis.html">OTIS</a>.
-      <br>
-      For practise, familarisation, and of course enjoyment, I'm also looking to do the online versions of the <a href="https://berkeley.mt/">Berkeley Math Tournament</a>, the <a href="https://www.stanfordmathtournament.com/">Stanford Math Tournament</a>, the <a href="https://www.hmmt.org/">HMMT</a>, and the <a href="https://www.ommcofficial.org/">OMMC</a>.
-      <br>
-      Lastly, I talked to an IMO participant to give me advice.
-      He was honest: I might be starting a bit late to do really well in maths tournaments.
-      However, he said I could still make solid progress if I put the effort in!
-      <br>
-      Throughout the year my main school work and extra-curriculars will require much more effort than in previous years.
-      But it's OK - I'll do what I can and push through even the hardest of chapters!
-      And even if there lies some dissapointment when I get the results to all of these competitions, <b>it's the journey - not the destination!</b>
-      <br><br>
-      Thanks for reading - see you soon!
-    </p>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Wonderful News & GCSE Season</h3><h6 style="text-align: right;">26/05/2025</h6></div>
-    <p>
-      If you've read my previous blog posts you'll know how much I was looking forward to doing the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>, and also how when it eventually came, I messed up by letting my lack-of-confidence get to me.
-      Looking back over the blog posts, you can see the gradual descent into pessimism and how I began dreading the day I got the results back.
-      <br>
-      Well, <b>I GOT A MERIT!!!</b>
-      <br>
-      I was truly overjoyed when I got that certificate (really, ask the guy next to me), and it's given me a lot more hope and confidence for the future olympiads I am planning to take.
-      It also fueled my passion for maths even more and encouraged me to push through a chapter that slightly challenged me in my <a href="https://artofproblemsolving.com/">AoPS</a> book (Number Theory & Modular Arithmetic).
-      For good measure, I've linked the certificate below.
-      <br><br>
-      Next, I have also spent some time signing up to programmes and doing my usual extra-curriculars (found in <a href="/aboutMe.html">About Me</a>).
-      In particular, I have started the <a href="https://electricsheep.teachable.com/">Electric Sheep Futurekind AI Fellowship</a>, and have gotten to know my cohort quite well whilst learning about the implicaitons and impacts of AI on animals (things such as PLF and using AI to decode animal communication).
-      The second half of the fellowship is project-based, and I'm really excited.
-      I won't spoil too much about what I'm working on (or else I risk over-promising), but I can't wait!
-      <br>
-      I was also rejected from <a href="https://www.leaf.courses/">Leaf</a>, but they have still offered me the opportunity to take their mathematical course (I know what I'm doing this summer).
-      <br>
-      Moreover, <a href="https://bute.energy/">Bute Energy</a> has also very kindly offered me some work experience and we've been able to arrange a date.
-      I'm thrilled that I'll get a chance to work on something as important as renewable energy!
-      <br>
-      Lastly, I found an incredible school in the US for students with an ambition for mathematics (<a href="https://www.proofschool.org/">Proof School</a>).
-      Although I am on the other side of the world, I emailed them in the hopes that they would be able to advise me on how I can self-study and learn some really interesting topics <s>(Galois Theory)</s>.
-      Thankfully, their response was incredibly helpful and pointed me to other mathematical programmes, as well as an incredible website to help prepare me for more Olympiads (<a href="https://web.evanchen.cc/">Evan Chen</a>).
-      <br><br>
-      Despite all of this exciting news however, I've still got GCSE exams just on the horizon.
-      <br>
-      As of writing this, I have just (a few days ago) had my Religous Studies exam.
-      I've still got all my sciences after half-term though (and Greek), so I'll have to get my head down over the next few weeks and ensure I get the best grades possible.
-      I'll be honest, I am (slightly) worried, but as long as I try my best (and revise enough), I hope I'll be fine.
-      <br><br>
-      This one is a short one, but that's it - see you next time!
-    </p>
-    <div class="file">
-      <a href="Files/HamiltonOlympiad2025.png">UKMT Hamilton Olympiad 2025: Merit Certificate</a>
-    </div>
-    <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>The Good, the <s>Bad</s> Good and the Ugly</h3><h6 style="text-align: right;">27/04/2025</h6></div>
-    <p>
-      It's been a very fast month and I didn't get around to updating my blog, but I realised today is the last day of my Easter holidays (oh no), so I better get around to updating this!
-      <br><br>
-      Firstly, I'm 15 at last (which means I can apply for <a href="https://www.leaf.courses/">Leaf</a>, but more on that later).
-      I have to admit that year flew by quite quickly and it's kind of insane to think that I'm 15 now.
-      When I was younger, being 15 in my eyes was pretty much synonymous with being an adult - but trust me when I say I do not feel that mature yet!
-      I feel like I've done so much but at the same time so little, and overall I'm a bit worried; if a year flies by that quickly, I'll be 18 very soon!
-      Even so, my family made sure I enjoyed my birthday, and my general mood has been elevated recently (hooray!).
-      <br><br>
-      Moving on from the more personal things, I am very happy to say that my <a href="https://oxplore.org/">Oxplore</a> essay was one of two runner ups in the competition!
-      I put a lot of effort into it, and I was able to link my fascination of quantum mechanics and uncertainty to the randomness of luck - so I was definitely overjoyed when I heard the news.
-      For good measure, I've linked both my essay and certificate below.
-      <br><br>
-      Additionally, I have also been offered a prize of 5 books from a giant list which they have sent me.
-      Particularly, the book <a href="https://academic.oup.com/book/689">Game Theory: A Very Short Introduction</a> has interested me the most because I have recently become captivated by the field of Game theory and Probability.
-      From trying to understand things such as Nash Equilibria and Bayes' Theorem, I am becoming more and more engulphed in this intriguing field.
-      Hence, I am ecstatic about learning more about it, which leads me onto my next paragraph…
-      Now that I'm 15 years old, I'm finally old enough to apply for a <a href="https://www.leaf.courses/">Leaf</a> course.
-      Hopefully from the above, my love for mathematics is quite evident and hence it should come as no surprise that I am applying for the mathematical course.
-      Even so I still have enthusiasm and a drive for learning more about the complex field of AI & machine learning (maths in disguise), and hence I would be ecstatic if I got into either course.
-      It is very competitive, but I am not too worried about that as even rejected applicants get access to the learning material.
-      I'll still try to make a good impression and application however (they might be reading this - hello!), but I am worried that I'll panic under the pressure of the second part of the application (which is more like a test).
-      <br><br>
-      The reason for this is because I recently took the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>.
-      I was in a room, under timed pressure (2 hours), with the task of doing 6 questions.
-      I panicked and blundered hard.
-      If you go through my previous blog posts, you'll see how much I was looking forward to this, and well - I'm disappointed.
-      The questions were great and now, having the solutions at hand, seem very simple.
-      But in those 2 hours under pressure, it felt like a mountain.
-      The reason I am so disappointed is not because I was unable to do it, but rather the opposite - my answers had the epiphany, they had realised the 'hard' part, but I'd mess up by missing one key fact or multiplying the wrong thing (particularly on questions 1 & 3).
-      The Olympiad is marked quite harshly, which means that the few minor blunders could make my marks nosedive.
-      Thus, I really don't think I achieved my goal of getting a merit.
-      Even so, I have to admit that it certainly did not deter me from mathematics, but it has rather fuelled my drive and I believe this is just a minor setback (keep calm and carry on, they say).
-      After all, there's always next year, and with hard work and a bit of luck (which is random) I'm sure I can do it!
-      <br><br>
-      Also, because of my interests in mathematics, physics and computer science, I felt it would be good for me to also compete in the <a href="https://www.bluequbit.io/quantum-computing-hackathon">BlueQubit Quantum Hackathon</a>.
-      I'm a complete beginner to quantum computing so I really didn't do too well (<a href="Files/BlueQubit_Quantum_Hackathon_2025_Leaderboard.png">I came 287th</a>), but quantum computing is a field I might want to pursue a career in so experience is always welcome!
-      <br><br>
-      Moreover, I've been trying to find work experience for physics and mathematics.
-      Writing a research paper seems to be challenging and perhaps overly ambitious (although I'm still trying and don't plan to stop), so I am looking for other things I could do.
-      I have recently come in contact with <a href="https://bute.energy/">Bute Energy</a>, and they're very kindly offering me work experience in the summer, where I'll get a much better understanding of what it's like working on some of the world's most pressing problems - such as fighting against climate change through renewable energy.
-      <br><br>
-      Lastly, I also got accepted into <a href="https://electricsheep.teachable.com/">Electric Sheep's Futurekind AI Fellowship</a>, suggested to me by <a href="https://www.effectivealtruism.org/">Effective Altruism</a>.
-      This will be a completely new experience for me, I'll tell you more soon!
-      <br><br>
-      I also had my Welsh & Greek GCSE speaking exams which I had to prepare and revise for.
-      I think they went well, although I did make some very simple mistakes which I can't get off my mind.
-      I have more GCSEs coming up (from 21st of May - 19th of June) which I have to revise for, so I might slow down on a few of the things I'm doing.
-      Don't worry though, I'll catch up when it's all over.
-      See you next time!
-    </p>
-    <div class="file">
-      <a href="Files/Oxplore_Essay_2025_Certificate.pdf">Oxplore Essay Runner-up Certificate</a>
-    </div>
-    <div class="file">
-      <a href="Files/Oxplore_Essay_2025.pdf">Oxplore Essay 2025: Do we make our own luck?</a>
-    </div>
-    <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>A Busy Fortnight</h3><h6 style="text-align: right;">12/03/2025</h6></div>
-    <p>
-      It's been two weeks since my last blog post, so I thought I'd write about what has happened.
-      <br><br>
-      Firstly, I took the <a href="https://www.internationalresearcholympiad.org/">International Research Olmypiad</a>.
-      It consisted of four papers in different fields and tested critical thinking, time management and overall analysis of research.
-      I must say, it was quite challenging so I didn't get through to the semi-finals, but I'm still quite happy I did it as it was a great learning opportunity and has gotten my very interested in doing my own research…
-      Additionally, if and when I get my certificate, I'll be sure to link it either below and/or in <a href="portfolio.html">my portfolio</a>.
-      <br><br>
-      Secondly, unfortunately I got rejected from <a href="https://www.non-trivial.org/">Non-Trivial</a>.
-      I was quite disappointed, but it inspired me to take initiative and email my local university asking for research opportunities (how exciting).
-      Plus, I can always try again in the future.
-      I put a lot of effort into my application however, and I still feel its worth publishing my answers to the brainteasers with my thought process behind them. I've thus linked them below.
-      <br><br>
-      I'm also going to be 15 soon, and I'll finally be able to apply for <a href="https://www.leaf.courses/">Leaf</a>.
-      The good thing is that even if I don't get accepted, they still give rejected students access to the resources - so I can still fuel my learning during the summer!
-      <br><br>
-      Moreover, I finished my <a href="https://oxplore.org/">Oxplore</a> essay regarding the question 'Do you make your own luck?'
-      It was certainly very interesting, making me link the quantum mechanics and philosophical arguments together.
-      I feel I may have talked a bit too much about physics, but hopefully that shows my passion and doesn't just appear as academic jargon.
-      I've linked the essay below for anyone interested.
-      <br><br>
-      Furthermore, I now have my hands on both volumes of the <a href="https://artofproblemsolving.com/">Art of Problem Solving</a> books.
-      I've only been able to read the first couple of pages so far but I had a skim through both of the books and I think they're going to be very beneficial reads, especially considering that I've talked to my school and I'm now set to do the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>…
-      <br><br>
-      I also applied to one of <a href="https://www.imperial.ac.uk/be-inspired/schools-outreach/secondary-schools/summer-schools/insights-into-stem/">Imperial College London's Year 10 Science Summer Residentials</a>.
-      Again, I'd absolutely love to get in as it would showcase my passion for physics and maths whilst allowing me to get-in-touch with like-minded people.
-      Even so, over the past few months I have become more comfortable with rejection, so even if things don't turn out I'll just keep pushing!
-      <br><br>
-      Lastly, I've been cold emailing a few people, joining communities and doing a lot more research about my future.
-      I am still uncertain as ever, but I am beginning to consider different careers I can pursue with a mathematics and physics degree.
-      Primarily I would like to do groundbreaking research to make a change and solve one of the world's leading problems, but alternatively I could go into medicine or quantitative finance.
-      <br>
-      I want to make a difference now, so I'm constantly meeting and emailing different people so I can help and do my part.
-      If you would like to get in contact, please don't hesistate to contact me at <a href="mailto:opportunities@manolidis.me">this email</a>.
-      <br>
-      We'll see how things turn out but in the meantime, I can continue trying my best and hope for the best.
-      After all, if I truely love what I do (which I do) then no amount of rejection can stop me!
-    </p>
-    <div class="file">
-      <a href="Files/Non_Trivial_Questions.pdf">My responses to the Non-Trivial brainteasers</a>
-    </div>
-    <div class="file">
-      <a href="Files/Oxplore_Essay_2025.pdf">Oxplore Essay: Do we make our own luck?</a>
-    </div>
-    <div class="file">
-      <a href="Files/IRO2025Certificate.png">International Research Olympiad 2025: Certificate</a>
-    </div>
-    <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Mocks Over & Half-Term</h3><h6 style="text-align: right;">25/02/2025</h6></div>
-    <p>
-      At last, half-term!
-      Since my last post, I had to undergo many mocks over the last two weeks, some being better than others.
-      I haven't received all my results yet, but I know I got 99% in Maths (99% in Numeracy & 100% in Mathematics) and an A* in Physics (woohoo)!
-      I do put a lot of time into them, so I am very happy I got good results.
-      With that being said, there's always room for improvement.
-      Particularly in physics, there are a few questions which caught me by surprise (and on one question I said 10+30=50)!
-      Then again, it was great practice and I think it'll make me much more prepared and clear-minded on the day of the real exam in May.
-      <br><br>
-      Furthermore, I also participated in one of the largest Welsh music competitions for young people, the <a href="https://www.urdd.cymru/en/eisteddfod/">Urdd's Eisteddfod</a>!
-      The competition was certainly fierce, but I was still able to perform my piece <a href="https://en.wikipedia.org/wiki/M%C3%A9ditation_(Tha%C3%AFs)">Méditation (Thaïs)</a> to a well enough standard to get 3rd place!
-      My certificate and feedback are linked below.
-      <br><br>
-      Now that it's half-term, I'd like to spend a bit of time working on a few things.
-      At least for these first few days, I'd like to take a break from my main school work and focus on super-curricular activities.
-      For example, the <a href="https://serenspace.wales/">Seren Academy</a> has offered me the chance to take part in <a href="https://oxplore.org/">Oxplore</a>, an essay competition ran by Oxford University.
-      Moreover, I'd like to apply to a summer school and will likely have to spend a large amount of time creating a thorough personal statement.
-      <br>
-      I am also debating whether I should buy the <a href="https://artofproblemsolving.com/">Art of Problem Solving</a> books, as I have heard they can give outstanding mathematical intuition and are incredible for preparing for the Olympiads.
-      I believe they would be particularly useful to me, especially considering I have the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a> coming up…
-      <br><br>
-      Lastly, I've also taken a keen interest in the world of AI, and would certainly like to learn a bit more about it.
-      Hence, I found a <a href="https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c">short course into AGI safety</a> by Google DeepMind, which I believe would serve as a nice starting point for me.
-      <br>
-      Considering the importance of AI in the coming years, I am also looking at the work of organisations such as <a href="https://www.aisi.gov.uk/">AISI</a>, and considering if it's something I'd like to pursue as a career…
-      <br><br>
-      See you next time!
-    </p>
-    <div class="file">
-      <a href="Files/Eistedfodd_Certificate_2025.png">3rd place Eisteddfod Certificate</a>
-    </div>
-    <div class="file">
-      <a href="Files/Eistedfodd_Feedback_2025.png">Eisteddfod Feedback (in Welsh)</a>
-    </div>
-    <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Rejection, Dissapointment, and Finding Resilience</h3><h6 style="text-align: right;">07/02/2025</h6></div>
-    <p>
-      These last two weeks have been harder than usual.
-      <br>
-      Last week, I sat the Intermediate Maths Challenge by UKMT. Even though I had done some preparation, the paper was significantly harder this year than in the other years.
-      Thus, I did find some questions quite hard.
-      I'm not mad about this - there's always things I won't be able to do.
-      The problem is I had set myself a target of getting gold this year (every other year I got silver), and there were some questions which I genuinely knew but because of the heat of the moment, I doubted myself and guessed.
-      This time I was so close, I knew the answers on some questions and I feel like I robbed myself of a great opportunity.
-      <br>
-      Additionally, this week I was rejected from a programme which could've greatly benefited my academic progression.
-      I put a lot of effort into my application, and I again feel dissapointed.
-      <br><br>
-      But I now feel I have learnt a valuable lesson, something which I was told when I first came to this country: 'keep calm and carry on.'
-      Despite my dissatisfaction with myself, I have learnt that the world keeps spinning, and if I truly have a passion for maths and physics, then I ought to keep going.
-      There will be more opportunities like the one I was rejected from, and I can still pay a discretionary fee to sit the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>.
-      <br>
-      The next two weeks are also going to be difficult, especially considering I have my mocks (and I need to start studying for the Hamilton Olympiad), but with resilience (and prayer), I'll push on!
-    </p>
-    <div class="file">
-      <a href="Files/SilverIMC2025.png">Silver UKMT IMC 2025 Certificate</a>
-    </div>
-    <br>
-    </div>
-    <br>
-    <div class="content"><div class="blog-title"><h3>Solar Panel Testing</h3><h6 style="text-align: right;">24/01/2025</h6></div>
+          The B1 Greek Examination went really well, I got my results a few days ago (although I'm still waiting for the official certificate) and I got the mark of άριστα (excellent) - hooray!
+          I was born in Greece, but because I left from a young age my Greek started to decline as I was growing up, to the point where I couldn't even spell 'hello' properly (I know it's γεια now, but we have so many letters for the'i' sound (ι, η, υ, ει, οι), so it gets confusing).
+          But luckly my teacher and my parents have pushed me and I have made progress in the last few years, of which I am very proud of.
+          I haven't got my Greek GCSE result back yet, but I have a (mostly) good feeling.
+          As for my other GCSEs, well - I have mixed opinions...
+          <ul>
+            <li><b>Biology</b> - This exam went quite well.
+                Biology was one of my weakest subjects and I studied so much that it definetly paid off.
+                I felt a lot of the questions were similar to those from past papers, so I think it was a great paper and I expect good results.</li>
+            <li><b>Chemistry</b> - This exam went really well.
+                I revised each topic thoroughly (although not as much as Biology), and the exam paper was awesome.
+                It tested me on my strongest topics, and the 6-marker was on chromatography (which is what I had in one of my unit tests).
+                I am really confident that I'll get good results for this.
+            </li>
+            <li><b>Physics.</b>
+              After two incredible papers, I shouldn't have expected mercy.
+              OK OK, I'm overeacting - but I found physics a lot harder than the other papers, which was a surprise as physics is one of my strong sciences, and the one I am most passionate about.
+              To be completely honest, the paper didn't go that bad, it's just that the last question threw me off.
+              It was a quite simple 2/3 marker to do with proportionality, but I overcomplicated it.
+              This isn't what annoys me though - it's the fact that, after overcomplicating it and creating a giant mathematical derivation, I got it right.
+              But the answer looked weird to me, so I crossed it out and put a completely incorrect one.
+              <br>
+              Overall it wasn't that bad a paper, and the grade boundaries for an A* are usually just about 50%.
+              However, I can't help but be annoyed at myself - I got those 3 marks after all that effort, and then crossed it out because it 'looked slightly off.'
+              <br>
+              It's OK... deep breath... move on...
+            </li>
+            <li><b>Religous Studies</b> - well enough.
+              I think my problem with this one is that I was more focused on including keywords rather than ellaborating ideas.
+              Especially for the 15-markers, I had so many Jewish words memorised that I just began writing about almost everything.
+              That's not to say I hadn't revised or that some valid points were made, but I feel like I will be penalised on some of the longer questions because I made lots of little points rather than a few big points.
+              However, it was still a nice paper and I managed to do really well (I think) on a very nasty question (interfaith), including lots of organisations (Interfaith Council of Wales, Christian-Muslim Forum, Council of Christians and Jews, Ecumenism, etc.) for a coherent and confident answer.
+            </li>
+          </ul>
+          As you may have noticed, I have a tendency to overexaggerate my flaws and mistakes, but I hope that shows that I care.
+          To tell the truth, GCSE season went really well - I'm lucky to have such amazing teachers to support me and we'll see how my effort pays out on results day...
+          <br><br>
+          Now for some exciting news... I got elected to be head boy!
+          <br>
+          It is a spectacular privilege and honour to have the backing of my teachers and to be elected for such a role.
+          I already love to speak publicly, and this role will give me the chance to further develop my speaking skills, as well as my teamwork and leadership skills.
+          Furthermore, I also get the benefit of further represnting my school in concerns and liturgies.
+          Most importantly, I get the chance to improve my school.
+          I get to gather and collect my classmates' suggestions, presenting them to teachers and hopefully making a positive, lasting impact on my school.
+          <br>
+          Also, perhaps I can combine my leadership role with my interest in mathematics.
+          I'm thinking of making a school-specific math/general-logic Olympiad to reveal to my peers the fascinating worlds of Game Theory, Number Theory, and more.
+          As of now, this is just a thought at the back of my mind, but we will see...
+          <br><br>
+          In other news, I've been working hard on my <a href="https://electricsheep.teachable.com/">Electric Sheep Futurekind AI Fellowship</a> project, involving epidemiology and graph theory.
+          The due date is in 5 days so I get to keep the suspense up for a little while longer, but I'm really excited to share my proposal with the entire community!
+          I've also been working on <a href="https://www.leaf.courses/">Leaf's</a> 'Morality of Mathematics' course, learning about really interesting things such as <a href="https://en.wikipedia.org/wiki/Long_tail">Long-tailed Events</a> and <a href="https://en.wikipedia.org/wiki/Pareto_principle">The 80/20 Rule</a>, and I hope to have that finished over the coming weeks.
+          <br>
+          <i>(I'm keeping these comments short so that I can write about my experience fully once I've finished, rather than in short and spread-out statements. Stay tuned for another blog post soon!)</i>
+          <br>
+          I've also got work experience coming up with <a href="https://bute.energy/">Bute Energy</a>.
+          They're a renewable energy company - so I'm REALLY eager to work with them on such a pressing issue, but again, I'll share my experience afterwards.
+          Until then, I'd like to talk about a new interest...
+          <br><br>
+          <b>Olympiads!</b> If you've read the last few blog posts, this is not new.
+          However, the length to which I do them and focus on them has completely changed.
+          So far, my mathematics journey has just been focused on doing further and more complex topics in the curriculum.
+          But the curriculum and its resources can sometimes be flawed - their purpose is not necessarily to teach students mathematics, but to teach them the skills to pass tests.
+          That's not to say it doesn't teach some advanced and interesting topics, but it doesn't devle deep enough into them for my liking.
+          Also, Olympiad questions are on another level.
+          I can't do many yet, but the elegance and logic that you require to do many of them, even though they might require more elementary mathematics, makes them more interesting to me.
+          <br>
+          Hence, I've been pulled deeper into the Olympiad/Competitive mathematics pipeline, and I've found lots of wonderful books to help me on my journey.
+          Notably,
+          <ol>
+            <li><b>Art of Problem Solving: The Basics Volumes <a href="https://artofproblemsolving.com/store/book/aops-vol1">1</a> & <a href="https://artofproblemsolving.com/store/book/aops-vol2">2</a>. </b>This book has so far proved unmatched in nurturing my mathematical upbringing, with simple explainations, intuitive steps and elegant solutions.
+            I hope to finish Volume 1 by September and Volume 2 by December.</li>
+            <li><b><a href="https://web.evanchen.cc/geombook.html">Euclidean Geomtry in Mathematical Olympiads</a>. </b>This book is harder than the AoPS books, but even the few pages I've so far read offer great insight.
+            I hope to fully start this book by the new year.</li>
+            <li><b><a href="https://math.univ-lyon1.fr/~ducatez/content/Modern_Olympiad_TN.pdf">Modern Olympiad Number Theory</a>. </b>Similar to the above, offers great insight but into a field which I am becoming ever more passionate about: Number Theory.
+            I hope to properly start reading this book in the new year.</li>
+            <li><b><a href="https://ia800800.us.archive.org/32/items/olympiad-combinatorics/Olympiad_Combinatorics.pdf">Olympiad Combinatorics</a>. </b>Combinatorics is perhaps my weakest topic right now, and it looks very intimidating.
+            But, just like with anything, with enough effort I'm sure I can overcome it!
+            Once again, the priority is to finish the AoPS book, so I hope to start this in the new year.</li>
+          </ol>
+          There are a few extra books (e.g. <a href="https://www.isinj.com/mt-usamo/Math%20Olympiad%20Dark%20Arts%20-%20Goucher%20(2012).pdf">The Olympiad Dark Arts</a>) which are way above my level that I still like to ocasionally flip through and stare at in awe.
+          Once I finish the AoPS I am also looking to start reading handouts, such as those by <a href="https://yufeizhao.com/olympiad/">Yufei Zhao</a>, and <a href="https://web.evanchen.cc/excerpts.html">OTIS by Evan Chen</a>.
+          I also signed up to do <a href="https://ukmt.org.uk/olympiad-mentoring-scheme">UKMT's Olympiad Mentoing Scheme</a> - I can't wait!
+          In the long term, I might also sign up to do <a href="https://web.evanchen.cc/otis.html">OTIS</a>.
+          <br>
+          For practise, familarisation, and of course enjoyment, I'm also looking to do the online versions of the <a href="https://berkeley.mt/">Berkeley Math Tournament</a>, the <a href="https://www.stanfordmathtournament.com/">Stanford Math Tournament</a>, the <a href="https://www.hmmt.org/">HMMT</a>, and the <a href="https://www.ommcofficial.org/">OMMC</a>.
+          <br>
+          Lastly, I talked to an IMO participant to give me advice.
+          He was honest: I might be starting a bit late to do really well in maths tournaments.
+          However, he said I could still make solid progress if I put the effort in!
+          <br>
+          Throughout the year my main school work and extra-curriculars will require much more effort than in previous years.
+          But it's OK - I'll do what I can and push through even the hardest of chapters!
+          And even if there lies some dissapointment when I get the results to all of these competitions, <b>it's the journey - not the destination!</b>
+          <br><br>
+          Thanks for reading - see you soon!
+        </p>
+      </div>
+    </details>
+
+    <details class="post" id="post-26052025">
+      <summary>
+        <span class="when">26/05/2025</span>
+        <span class="post-title">Wonderful News & GCSE Season</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          If you've read my previous blog posts you'll know how much I was looking forward to doing the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>, and also how when it eventually came, I messed up by letting my lack-of-confidence get to me.
+          Looking back over the blog posts, you can see the gradual descent into pessimism and how I began dreading the day I got the results back.
+          <br>
+          Well, <b>I GOT A MERIT!!!</b>
+          <br>
+          I was truly overjoyed when I got that certificate (really, ask the guy next to me), and it's given me a lot more hope and confidence for the future olympiads I am planning to take.
+          It also fueled my passion for maths even more and encouraged me to push through a chapter that slightly challenged me in my <a href="https://artofproblemsolving.com/">AoPS</a> book (Number Theory & Modular Arithmetic).
+          For good measure, I've linked the certificate below.
+          <br><br>
+          Next, I have also spent some time signing up to programmes and doing my usual extra-curriculars (found in <a href="/aboutMe.html">About Me</a>).
+          In particular, I have started the <a href="https://electricsheep.teachable.com/">Electric Sheep Futurekind AI Fellowship</a>, and have gotten to know my cohort quite well whilst learning about the implicaitons and impacts of AI on animals (things such as PLF and using AI to decode animal communication).
+          The second half of the fellowship is project-based, and I'm really excited.
+          I won't spoil too much about what I'm working on (or else I risk over-promising), but I can't wait!
+          <br>
+          I was also rejected from <a href="https://www.leaf.courses/">Leaf</a>, but they have still offered me the opportunity to take their mathematical course (I know what I'm doing this summer).
+          <br>
+          Moreover, <a href="https://bute.energy/">Bute Energy</a> has also very kindly offered me some work experience and we've been able to arrange a date.
+          I'm thrilled that I'll get a chance to work on something as important as renewable energy!
+          <br>
+          Lastly, I found an incredible school in the US for students with an ambition for mathematics (<a href="https://www.proofschool.org/">Proof School</a>).
+          Although I am on the other side of the world, I emailed them in the hopes that they would be able to advise me on how I can self-study and learn some really interesting topics <s>(Galois Theory)</s>.
+          Thankfully, their response was incredibly helpful and pointed me to other mathematical programmes, as well as an incredible website to help prepare me for more Olympiads (<a href="https://web.evanchen.cc/">Evan Chen</a>).
+          <br><br>
+          Despite all of this exciting news however, I've still got GCSE exams just on the horizon.
+          <br>
+          As of writing this, I have just (a few days ago) had my Religous Studies exam.
+          I've still got all my sciences after half-term though (and Greek), so I'll have to get my head down over the next few weeks and ensure I get the best grades possible.
+          I'll be honest, I am (slightly) worried, but as long as I try my best (and revise enough), I hope I'll be fine.
+          <br><br>
+          This one is a short one, but that's it - see you next time!
+        </p>
+        <div class="files">
+          <div class="file"><a href="Files/HamiltonOlympiad2025.png">UKMT Hamilton Olympiad 2025: Merit Certificate</a></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="post" id="post-27042025">
+      <summary>
+        <span class="when">27/04/2025</span>
+        <span class="post-title">The Good, the <s>Bad</s> Good and the Ugly</span>
+      </summary>
+      <div class="post-body">
+      <p>
+        It's been a very fast month and I didn't get around to updating my blog, but I realised today is the last day of my Easter holidays (oh no), so I better get around to updating this!
+        <br><br>
+        Firstly, I'm 15 at last (which means I can apply for <a href="https://www.leaf.courses/">Leaf</a>, but more on that later).
+        I have to admit that year flew by quite quickly and it's kind of insane to think that I'm 15 now.
+        When I was younger, being 15 in my eyes was pretty much synonymous with being an adult - but trust me when I say I do not feel that mature yet!
+        I feel like I've done so much but at the same time so little, and overall I'm a bit worried; if a year flies by that quickly, I'll be 18 very soon!
+        Even so, my family made sure I enjoyed my birthday, and my general mood has been elevated recently (hooray!).
+        <br><br>
+        Moving on from the more personal things, I am very happy to say that my <a href="https://oxplore.org/">Oxplore</a> essay was one of two runner ups in the competition!
+        I put a lot of effort into it, and I was able to link my fascination of quantum mechanics and uncertainty to the randomness of luck - so I was definitely overjoyed when I heard the news.
+        For good measure, I've linked both my essay and certificate below.
+        <br><br>
+        Additionally, I have also been offered a prize of 5 books from a giant list which they have sent me.
+        Particularly, the book <a href="https://academic.oup.com/book/689">Game Theory: A Very Short Introduction</a> has interested me the most because I have recently become captivated by the field of Game theory and Probability.
+        From trying to understand things such as Nash Equilibria and Bayes' Theorem, I am becoming more and more engulphed in this intriguing field.
+        Hence, I am ecstatic about learning more about it, which leads me onto my next paragraph…
+        Now that I'm 15 years old, I'm finally old enough to apply for a <a href="https://www.leaf.courses/">Leaf</a> course.
+        Hopefully from the above, my love for mathematics is quite evident and hence it should come as no surprise that I am applying for the mathematical course.
+        Even so I still have enthusiasm and a drive for learning more about the complex field of AI & machine learning (maths in disguise), and hence I would be ecstatic if I got into either course.
+        It is very competitive, but I am not too worried about that as even rejected applicants get access to the learning material.
+        I'll still try to make a good impression and application however (they might be reading this - hello!), but I am worried that I'll panic under the pressure of the second part of the application (which is more like a test).
+        <br><br>
+        The reason for this is because I recently took the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>.
+        I was in a room, under timed pressure (2 hours), with the task of doing 6 questions.
+        I panicked and blundered hard.
+        If you go through my previous blog posts, you'll see how much I was looking forward to this, and well - I'm disappointed.
+        The questions were great and now, having the solutions at hand, seem very simple.
+        But in those 2 hours under pressure, it felt like a mountain.
+        The reason I am so disappointed is not because I was unable to do it, but rather the opposite - my answers had the epiphany, they had realised the 'hard' part, but I'd mess up by missing one key fact or multiplying the wrong thing (particularly on questions 1 & 3).
+        The Olympiad is marked quite harshly, which means that the few minor blunders could make my marks nosedive.
+        Thus, I really don't think I achieved my goal of getting a merit.
+        Even so, I have to admit that it certainly did not deter me from mathematics, but it has rather fuelled my drive and I believe this is just a minor setback (keep calm and carry on, they say).
+        After all, there's always next year, and with hard work and a bit of luck (which is random) I'm sure I can do it!
+        <br><br>
+        Also, because of my interests in mathematics, physics and computer science, I felt it would be good for me to also compete in the <a href="https://www.bluequbit.io/quantum-computing-hackathon">BlueQubit Quantum Hackathon</a>.
+        I'm a complete beginner to quantum computing so I really didn't do too well (<a href="Files/BlueQubit_Quantum_Hackathon_2025_Leaderboard.png">I came 287th</a>), but quantum computing is a field I might want to pursue a career in so experience is always welcome!
+        <br><br>
+        Moreover, I've been trying to find work experience for physics and mathematics.
+        Writing a research paper seems to be challenging and perhaps overly ambitious (although I'm still trying and don't plan to stop), so I am looking for other things I could do.
+        I have recently come in contact with <a href="https://bute.energy/">Bute Energy</a>, and they're very kindly offering me work experience in the summer, where I'll get a much better understanding of what it's like working on some of the world's most pressing problems - such as fighting against climate change through renewable energy.
+        <br><br>
+        Lastly, I also got accepted into <a href="https://electricsheep.teachable.com/">Electric Sheep's Futurekind AI Fellowship</a>, suggested to me by <a href="https://www.effectivealtruism.org/">Effective Altruism</a>.
+        This will be a completely new experience for me, I'll tell you more soon!
+        <br><br>
+        I also had my Welsh & Greek GCSE speaking exams which I had to prepare and revise for.
+        I think they went well, although I did make some very simple mistakes which I can't get off my mind.
+        I have more GCSEs coming up (from 21st of May - 19th of June) which I have to revise for, so I might slow down on a few of the things I'm doing.
+        Don't worry though, I'll catch up when it's all over.
+        See you next time!
+      </p>
+        <div class="files">
+          <div class="file"><a href="Files/Oxplore_Essay_2025_Certificate.pdf">Oxplore Essay Runner-up Certificate</a></div>
+          <div class="file"><a href="Files/Oxplore_Essay_2025.pdf">Oxplore Essay 2025: Do we make our own luck?</a></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="post" id="post-12032025">
+      <summary>
+        <span class="when">12/03/2025</span>
+        <span class="post-title">A Busy Fortnight</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          It's been two weeks since my last blog post, so I thought I'd write about what has happened.
+          <br><br>
+          Firstly, I took the <a href="https://www.internationalresearcholympiad.org/">International Research Olmypiad</a>.
+          It consisted of four papers in different fields and tested critical thinking, time management and overall analysis of research.
+          I must say, it was quite challenging so I didn't get through to the semi-finals, but I'm still quite happy I did it as it was a great learning opportunity and has gotten my very interested in doing my own research…
+          Additionally, if and when I get my certificate, I'll be sure to link it either below and/or in <a href="portfolio.html">my portfolio</a>.
+          <br><br>
+          Secondly, unfortunately I got rejected from <a href="https://www.non-trivial.org/">Non-Trivial</a>.
+          I was quite disappointed, but it inspired me to take initiative and email my local university asking for research opportunities (how exciting).
+          Plus, I can always try again in the future.
+          I put a lot of effort into my application however, and I still feel its worth publishing my answers to the brainteasers with my thought process behind them. I've thus linked them below.
+          <br><br>
+          I'm also going to be 15 soon, and I'll finally be able to apply for <a href="https://www.leaf.courses/">Leaf</a>.
+          The good thing is that even if I don't get accepted, they still give rejected students access to the resources - so I can still fuel my learning during the summer!
+          <br><br>
+          Moreover, I finished my <a href="https://oxplore.org/">Oxplore</a> essay regarding the question 'Do you make your own luck?'
+          It was certainly very interesting, making me link the quantum mechanics and philosophical arguments together.
+          I feel I may have talked a bit too much about physics, but hopefully that shows my passion and doesn't just appear as academic jargon.
+          I've linked the essay below for anyone interested.
+          <br><br>
+          Furthermore, I now have my hands on both volumes of the <a href="https://artofproblemsolving.com/">Art of Problem Solving</a> books.
+          I've only been able to read the first couple of pages so far but I had a skim through both of the books and I think they're going to be very beneficial reads, especially considering that I've talked to my school and I'm now set to do the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>…
+          <br><br>
+          I also applied to one of <a href="https://www.imperial.ac.uk/be-inspired/schools-outreach/secondary-schools/summer-schools/insights-into-stem/">Imperial College London's Year 10 Science Summer Residentials</a>.
+          Again, I'd absolutely love to get in as it would showcase my passion for physics and maths whilst allowing me to get-in-touch with like-minded people.
+          Even so, over the past few months I have become more comfortable with rejection, so even if things don't turn out I'll just keep pushing!
+          <br><br>
+          Lastly, I've been cold emailing a few people, joining communities and doing a lot more research about my future.
+          I am still uncertain as ever, but I am beginning to consider different careers I can pursue with a mathematics and physics degree.
+          Primarily I would like to do groundbreaking research to make a change and solve one of the world's leading problems, but alternatively I could go into medicine or quantitative finance.
+          <br>
+          I want to make a difference now, so I'm constantly meeting and emailing different people so I can help and do my part.
+          If you would like to get in contact, please don't hesistate to contact me at <a href="mailto:opportunities@manolidis.me">this email</a>.
+          <br>
+          We'll see how things turn out but in the meantime, I can continue trying my best and hope for the best.
+          After all, if I truely love what I do (which I do) then no amount of rejection can stop me!
+        </p>
+        <div class="files">
+          <div class="file"><a href="Files/Non_Trivial_Questions.pdf">My responses to the Non-Trivial brainteasers</a></div>
+          <div class="file"><a href="Files/Oxplore_Essay_2025.pdf">Oxplore Essay: Do we make our own luck?</a></div>
+          <div class="file"><a href="Files/IRO2025Certificate.png">International Research Olympiad 2025: Certificate</a></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="post" id="post-25022025">
+      <summary>
+        <span class="when">25/02/2025</span>
+        <span class="post-title">Mocks Over & Half-Term</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          At last, half-term!
+          Since my last post, I had to undergo many mocks over the last two weeks, some being better than others.
+          I haven't received all my results yet, but I know I got 99% in Maths (99% in Numeracy & 100% in Mathematics) and an A* in Physics (woohoo)!
+          I do put a lot of time into them, so I am very happy I got good results.
+          With that being said, there's always room for improvement.
+          Particularly in physics, there are a few questions which caught me by surprise (and on one question I said 10+30=50)!
+          Then again, it was great practice and I think it'll make me much more prepared and clear-minded on the day of the real exam in May.
+          <br><br>
+          Furthermore, I also participated in one of the largest Welsh music competitions for young people, the <a href="https://www.urdd.cymru/en/eisteddfod/">Urdd's Eisteddfod</a>!
+          The competition was certainly fierce, but I was still able to perform my piece <a href="https://en.wikipedia.org/wiki/M%C3%A9ditation_(Tha%C3%AFs)">Méditation (Thaïs)</a> to a well enough standard to get 3rd place!
+          My certificate and feedback are linked below.
+          <br><br>
+          Now that it's half-term, I'd like to spend a bit of time working on a few things.
+          At least for these first few days, I'd like to take a break from my main school work and focus on super-curricular activities.
+          For example, the <a href="https://serenspace.wales/">Seren Academy</a> has offered me the chance to take part in <a href="https://oxplore.org/">Oxplore</a>, an essay competition ran by Oxford University.
+          Moreover, I'd like to apply to a summer school and will likely have to spend a large amount of time creating a thorough personal statement.
+          <br>
+          I am also debating whether I should buy the <a href="https://artofproblemsolving.com/">Art of Problem Solving</a> books, as I have heard they can give outstanding mathematical intuition and are incredible for preparing for the Olympiads.
+          I believe they would be particularly useful to me, especially considering I have the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a> coming up…
+          <br><br>
+          Lastly, I've also taken a keen interest in the world of AI, and would certainly like to learn a bit more about it.
+          Hence, I found a <a href="https://deepmindsafetyresearch.medium.com/introducing-our-short-course-on-agi-safety-1072adb7912c">short course into AGI safety</a> by Google DeepMind, which I believe would serve as a nice starting point for me.
+          <br>
+          Considering the importance of AI in the coming years, I am also looking at the work of organisations such as <a href="https://www.aisi.gov.uk/">AISI</a>, and considering if it's something I'd like to pursue as a career…
+          <br><br>
+          See you next time!
+        </p>
+        <div class="files">
+          <div class="file"><a href="Files/Eistedfodd_Certificate_2025.png">3rd place Eisteddfod Certificate</a></div>
+          <div class="file"><a href="Files/Eistedfodd_Feedback_2025.png">Eisteddfod Feedback (in Welsh)</a></div>
+        </div>
+      </div>
+    </details>
+    
+    <details class="post" id="post-07022025">
+      <summary>
+        <span class="when">07/02/2025</span>
+        <span class="post-title">Rejection, Dissapointment, and Finding Resilience</span>
+      </summary>
+      <div class="post-body">
+        <p>
+          These last two weeks have been harder than usual.
+          <br>
+          Last week, I sat the Intermediate Maths Challenge by UKMT. Even though I had done some preparation, the paper was significantly harder this year than in the other years.
+          Thus, I did find some questions quite hard.
+          I'm not mad about this - there's always things I won't be able to do.
+          The problem is I had set myself a target of getting gold this year (every other year I got silver), and there were some questions which I genuinely knew but because of the heat of the moment, I doubted myself and guessed.
+          This time I was so close, I knew the answers on some questions and I feel like I robbed myself of a great opportunity.
+          <br>
+          Additionally, this week I was rejected from a programme which could've greatly benefited my academic progression.
+          I put a lot of effort into my application, and I again feel dissapointed.
+          <br><br>
+          But I now feel I have learnt a valuable lesson, something which I was told when I first came to this country: 'keep calm and carry on.'
+          Despite my dissatisfaction with myself, I have learnt that the world keeps spinning, and if I truly have a passion for maths and physics, then I ought to keep going.
+          There will be more opportunities like the one I was rejected from, and I can still pay a discretionary fee to sit the <a href="https://ukmt.org.uk/intermediate-challenges/cayley-hamilton-maclaurin-olympiad-challenge">Hamilton Olympiad</a>.
+          <br>
+          The next two weeks are also going to be difficult, especially considering I have my mocks (and I need to start studying for the Hamilton Olympiad), but with resilience (and prayer), I'll push on!
+        </p>
+        <div class="files">
+          <div class="file"><a href="Files/SilverIMC2025.png">Silver UKMT IMC 2025 Certificate</a></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="post" id="post-24012025">
+      <summary>
+        <span class="when">24/01/2025</span>
+        <span class="post-title">Solar Panel Testing</span>
+      </summary>
+      <div class="post-body">
         <p>
         This is my first post, how exciting!
         <br>
@@ -673,6 +735,15 @@
         <br>
         Overall, it was a very informative and insightful day, and I can't wait to see what projects I'll make with my new spare parts...
        </p>
-    </div>
-  </body>
+      </div>
+    </details>
+
+  </section>
+</main>
+
+<footer>
+  <p>Autumn 2026 · Spyridon Manolidis · <a href="index.html">Back to the homepage</a></p>
+</footer>
+
+</body>
 </html>

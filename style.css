@@ -1,201 +1,600 @@
-body {
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2310122f' points='800 100 0 200 0 800 1600 800 1600 200'/%3E%3Cpolygon fill='%2321255e' points='800 200 0 400 0 800 1600 800 1600 400'/%3E%3Cpolygon fill='%2331378d' points='800 300 0 600 0 800 1600 800 1600 600'/%3E%3Cpolygon fill='%234149bc' points='1600 800 800 400 0 800'/%3E%3Cpolygon fill='%237076cd' points='1280 800 800 500 320 800'/%3E%3Cpolygon fill='%239fa3de' points='533.3 800 1066.7 800 800 600'/%3E%3Cpolygon fill='%23CED0EE' points='684.1 800 914.3 800 800 700'/%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    /* Free SVG Backgrounds and Patterns by SVGBackgrounds.com; Matt Visiwig */
-    color: white;
-    font-family: Ubuntu;
-    font-weight: 300;
-} 
+/* ── tokens ───────────────────────────────────────────── */
+:root{
+  --bg:#fbfbf9;
+  --surface:#ffffff;
+  --ink:#15171b;
+  --muted:#5f6773;
+  --rule:#e2e0d9;
+  --accent:#1d4e79;
+  --todo:#fff2a8;
 
-nav {
-  background-color: rgba(0,0,0,0.9);
-  padding: .33rem;
-  border-radius: 1rem;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+
+  --measure:44rem;
+  --gutter:1.35rem;
+  --nav-h:3.1rem;
 }
 
-nav ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: auto 10px auto 10px auto 10px auto 10px 2.2rem;
-  padding-left: .33rem;
-  margin: .2rem;
-}
-
-nav ul a {
-  text-align: center;
-  border-width: 3px;
-  border-color: white;
-  border-style: solid;
-  padding: .33rem;
-  text-decoration: none;
-  color: white;
-  border-radius: .33rem;
-  transition: all .33s;
-}
-
-nav ul a:hover {
-  border-color: rgba(0, 0, 0, 0);
-  color: black;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-hr {
-  width: 90%;
-}
-
-.currentP {
-  text-decoration: underline;
-  font-style: italic;
-  font-weight: bold;
-}
-
-h1 {
-  text-align: center;
-}
-
-a {
-  color: inherit;
-}
-
-.content p a:hover {
-  background-clip: text;
-  animation: rainbow 1s linear 1;
-}
-
-.rainbowFixList li a:hover {
-  background-clip: text;
-  animation: rainbow 1s linear 1;
-}
-
-.rainbowFix:hover {
-  background-clip: text;
-  animation: rainbow 1s linear 1;
-}
-
-.noBorder {
-  border-style: none;
-}
-
-.noMargin {
-  margin: none;
-}
-
-.noPadding {
-  padding: none;
-}
-
-.titleLine {
-  border-bottom: 3px solid white;
-  width: 75%;
-  margin: 0 auto;
-}
-
-.cursive {
-  font-family: Playwrite CU;
-}
-
-.colourful {
-  animation: blue 1s infinite linear alternate;
-}
-
-.content {
-  background-color: rgba(0,0,0,0.5);
-  padding: 0.001rem 1rem;
-  border-radius: 1rem;
-  width:90%;
-  margin: 0 auto;
-  transition: all .33s;
-}
-
-.content:hover {
-  padding: .001rem 2rem;
-}
-
-.blog-title {
-  display: flex;
-  justify-content: space-between;
-}
-
-  .file {
-  background-color: rgba(96,96,96,0.5);
-  padding: .5rem .1rem;
-  border-radius: .5rem;
-  text-align: center;
-  margin: .2rem;
-  transition: background-color .2s, color .2s;
-}
-
-.file:hover {
-  background-color: rgba(255,255,255,0.5);
-  color: black;
-}
-
-.centre {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.tablic-p {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.tablic-c {
-  flex: 1;
-  text-align: center;
-  vertical-align: middle;
-  width: 50%;
-}
-  
-@keyframes blue {
-  0% {color:rgb(51, 204, 204)}
-  50% {color:rgb(0, 102, 204);}
-  100% {color:rgb(153, 153, 255);}
-}
-
-@keyframes rainbow {
-  0% {background-image: linear-gradient(to right, white, red);  color: transparent;}
-  12.5% {background-image: linear-gradient(to right, red , orange);}
-  25% {background-image: linear-gradient(to right, orange , yellow);}
-  37.5% {background-image: linear-gradient(to right, yellow , green);}
-  50% {background-image: linear-gradient(to right, green , blue);}
-  62.5% {background-image: linear-gradient(to right, blue , indigo);}
-  75% {background-image: linear-gradient(to right, indigo , violet);}
-  87.5% {background-image: linear-gradient(to right, violet , red);}
-  93.5% {background-image: linear-gradient(to right, red , white);}
-  100% {background-image: linear-gradient(to right, white , red); color: white;}
-}
-
-#announcementDiv {
-  width:100%;
-  background-color: rgba(0,0,0,0.75);
-}
-
-#announcementText {
-  margin: 0;
-  padding: 0;
-}
-
-#handwritten {
-  stroke-dasharray: 10918;
-  stroke-dashoffset: 10918;
-  animation: write 3s ease;
-  animation-fill-mode: forwards;
-}
-
-@keyframes write {
-  to {
-      stroke-dashoffset: 0;
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f1113;
+    --surface:#171a1e;
+    --ink:#e9eaec;
+    --muted:#98a1ad;
+    --rule:#292d33;
+    --accent:#89b4fa;
+    --todo:#4a4116;
   }
+}
+
+/* ── base ─────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--nav-h) + .75rem)}
+
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:clamp(1rem,.97rem + .2vw,1.0625rem);
+  line-height:1.65;
+  font-kerning:normal;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+
+.masthead,main,footer{max-width:var(--measure);margin-inline:auto;padding-inline:var(--gutter)}
+
+p{margin:0 0 .95rem}
+p:last-child{margin-bottom:0}
+
+a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-decoration-thickness:.06em;
+  text-underline-offset:.18em;
+}
+a:hover{text-decoration-color:currentColor}
+
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+::selection{background:var(--accent);color:var(--bg)}
+
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:100;background:var(--surface);padding:.5rem .8rem;
+  border:1px solid var(--rule);border-radius:3px}
+
+/* ── sticky navigator ─────────────────────────────────── */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:color-mix(in srgb,var(--bg) 86%,transparent);
+  -webkit-backdrop-filter:blur(10px) saturate(1.4);
+  backdrop-filter:blur(10px) saturate(1.4);
+  border-bottom:1px solid var(--rule);
+}
+
+.nav-inner{
+  max-width:var(--measure);
+  margin-inline:auto;
+  padding:0 var(--gutter);
+  min-height:var(--nav-h);
+  display:flex;
+  align-items:center;
+  gap:1.4rem;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-inner::-webkit-scrollbar{display:none}
+
+.nav a{
+  position:relative;
+  display:inline-block;
+  text-decoration:none;
+  font-size:.845rem;
+  color:var(--muted);
+  white-space:nowrap;
+  padding:.25rem 0;
+  transition:color .16s ease;
+}
+.nav a:hover,
+.nav a:focus-visible{color:var(--ink)}
+
+/* the underline: grows out from the left on hover, stays put if you're there */
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:1.5px;
+  border-radius:1px;
+  background:currentColor;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .22s cubic-bezier(.2,.75,.3,1),background .16s ease;
+}
+.nav a:hover::after,
+.nav a:focus-visible::after{transform:scaleX(1)}
+
+/* current page or current section — ink colour, accent rule, never a weight change */
+.nav a[aria-current]{color:var(--ink)}
+.nav a[aria-current]::after{transform:scaleX(1);background:var(--accent)}
+
+.nav-home{
+  font-family:var(--serif);
+  font-size:.95rem!important;
+  font-weight:600;
+  color:var(--ink)!important;
+  letter-spacing:-.005em;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:1.15rem;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.nav-blog{
+  margin-left:auto;
+  font-weight:600;          /* bold in every state, which is the whole point */
+  color:var(--ink)!important;
+}
+
+/* ── masthead ─────────────────────────────────────────── */
+.masthead{padding-top:clamp(2.4rem,6vw,4rem)}
+
+h1{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(1.9rem,1.5rem + 1.7vw,2.55rem);
+  line-height:1.12;
+  letter-spacing:-.012em;
+  margin:0 0 .6rem;
+}
+
+.masthead--compact h1{font-size:clamp(1.6rem,1.35rem + 1.1vw,2rem)}
+
+.tagline{
+  color:var(--muted);
+  font-size:1.04rem;
+  max-width:32rem;
+  margin:0 0 1.15rem;
+}
+
+.count{
+  font-family:var(--mono);
+  font-size:.76rem;
+  color:var(--muted);
+  margin:0;
+}
+
+.links{
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem 1.15rem;
+  margin:0;
+  padding:0;
+  font-size:.93rem;
+}
+.links li{display:flex;align-items:center;gap:1.15rem}
+.links li + li::before{
+  content:"·";
+  color:var(--rule);
+  font-size:1.1em;
+  margin-right:-.55rem;
+}
+
+/* ── the name: one-time typeface settle ───────────────── */
+#site-name{
+  line-height:1.12;      /* fixed line box, so the fonts never push the page around */
+  min-height:1.12em;
+}
+html.cycle-name #site-name{
+  font-family:var(--mono);
+  font-variant-ligatures:none;
+}
+
+/* ── sections ─────────────────────────────────────────── */
+section{margin-top:3.1rem}
+
+h2{
+  font-family:var(--serif);
+  font-size:.8rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  color:var(--muted);
+  margin:0 0 1.2rem;
+  padding-bottom:.5rem;
+  border-bottom:1px solid var(--rule);
+}
+
+h3{
+  font-family:var(--serif);
+  font-size:.6rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  color:var(--muted);
+  margin:0 0 1.2rem;
+  padding-bottom:.5rem;
+  border-bottom:1px solid var(--rule);
+}
+
+/* the section you jumped to gets a quiet highlight */
+section:target h2{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* ── dated entries ────────────────────────────────────── */
+.entry{
+  display:grid;
+  grid-template-columns:7.5rem minmax(0,1fr);
+  gap:.1rem 1.5rem;
+  margin-bottom:1.25rem;
+}
+.entry:last-child{margin-bottom:0}
+
+.when{
+  font-family:var(--mono);
+  font-size:.76rem;
+  color:var(--muted);
+  padding-top:.42em;
+  white-space:nowrap;
+  letter-spacing:.005em;
+}
+
+.entry h3{
+  margin:0;
+  font-size:1.005rem;
+  font-weight:600;
+  line-height:1.4;
+}
+
+.meta{
+  color:var(--muted);
+  font-size:.94rem;
+  margin:.15rem 0 0;
+  max-width:36rem;
+}
+
+.more{margin-top:1.4rem;font-size:.93rem}
+
+/* ── inline tags ([PDF] [DOI] [Code]) ─────────────────── */
+.tags{margin:.45rem 0 0;display:flex;flex-wrap:wrap;gap:.4rem}
+
+.tag{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--muted);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:.1rem .42rem;
+  transition:color .12s ease,border-color .12s ease;
+}
+p .tag{vertical-align:.08em;margin-left:.15rem}
+.tag:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ── the "currently" line ─────────────────────────────── */
+.currently{
+  margin-top:1.35rem;
+  padding-left:.9rem;
+  border-left:2px solid var(--rule);
+  color:var(--muted);
+  font-size:.95rem;
+  max-width:36rem;
+}
+.currently strong{color:var(--ink);font-weight:600}
+
+/* ── TODO markers: delete the <mark> when done ────────── */
+.todo{background:var(--todo);color:inherit;padding:0 .18em;border-radius:2px;font-style:normal}
+
+/* ══ BLOG: posts as accordions ═══════════════════════════ */
+.posts{border-top:1px solid var(--rule)}
+
+.post{
+  border-bottom:1px solid var(--rule);
+  scroll-margin-top:calc(var(--nav-h) + 1rem);   /* so #post-slug clears the sticky nav */
+}
+
+.post summary{
+  display:grid;
+  grid-template-columns:7.5rem minmax(0,1fr) 1.1rem;
+  align-items:baseline;
+  gap:0 1.5rem;
+  padding:1rem 0;
+  cursor:pointer;
+  list-style:none;
+}
+.post summary::-webkit-details-marker{display:none}
+.post summary:hover .post-title{color:var(--accent)}
+.post summary:focus-visible{outline-offset:4px}
+.post summary .when{padding-top:.1em}
+
+.post-title{
+  font-size:1.03rem;
+  font-weight:600;
+  line-height:1.4;
+  transition:color .12s ease;
+}
+
+.post summary::after{
+  content:"+";
+  font-family:var(--mono);
+  font-size:.95rem;
+  line-height:1;
+  color:var(--muted);
+  justify-self:end;
+  transition:color .12s ease;
+}
+.post[open] summary::after{content:"–";color:var(--accent)}
+
+/* ── post body ────────────────────────────────────────── */
+.post-body{
+  padding:.1rem 0 1.7rem calc(7.5rem + 1.5rem);
+  font-size:1rem;
+}
+.post-body > :first-child{margin-top:0}
+.post-body p{margin:0 0 .95rem}
+
+.post-body h1,.post-body h2,.post-body h3,.post-body h4{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  font-weight:600;
+  letter-spacing:0;
+  text-transform:none;
+  border:0;
+  padding:0;
+  margin:1.5rem 0 .5rem;
+  color:var(--ink);
+}
+
+.post-body ul,.post-body ol{margin:0 0 .95rem;padding-left:1.25rem}
+.post-body li{margin-bottom:.3rem}
+
+.post-body img{max-width:100%;height:auto;border-radius:4px;margin:.4rem 0}
+
+.post-body code{
+  font-family:var(--mono);
+  font-size:.89em;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:.08em .3em;
+}
+.post-body pre{
+  overflow-x:auto;
+  padding:.9rem 1rem;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  font-size:.86rem;
+  line-height:1.5;
+}
+.post-body pre code{background:none;border:0;padding:0;font-size:inherit}
+
+.post-body blockquote{
+  margin:1.1rem 0;
+  padding-left:1rem;
+  border-left:2px solid var(--rule);
+  color:var(--muted);
+}
+
+.post-body hr{border:0;border-top:1px solid var(--rule);margin:1.6rem 0}
+
+.post-body table{width:100%;border-collapse:collapse;font-size:.92rem;margin:0 0 1rem}
+.post-body th,.post-body td{
+  text-align:left;
+  padding:.4rem .6rem .4rem 0;
+  border-bottom:1px solid var(--rule);
+  vertical-align:top;
+}
+.post-body th{font-weight:600}
+
+/* an old post pasted whole keeps working: its <div class="content"> -->
+   renders fine, and its title/date are suppressed because the <summary> 
+   already shows them                                                  */
+.post-body .content{margin:0}
+.post-body .blog-title{display:none}
+
+/* ── attachments ──────────────────────────────────────── */
+.post-body .files{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin:1.25rem 0 0;
+}
+.post-body .files:last-child{margin-bottom:0}
+
+.post-body .file{
+  display:inline-flex;
+  align-items:baseline;
+  border:1px solid var(--rule);
+  border-radius:4px;
+  background:var(--surface);
+  padding:.45rem .72rem;
+  font-size:.9rem;
+  line-height:1.35;
+  transition:border-color .12s ease;
+}
+.post-body .file:hover{border-color:var(--accent)}
+
+.post-body .file a{text-decoration:none;color:var(--ink)}
+.post-body .file a:hover{color:var(--accent)}
+.post-body .file a:focus-visible{outline-offset:2px}
+
+/* the type badge — read off the extension in the href */
+.post-body .file a::before{
+  content:"FILE";
+  font-family:var(--mono);
+  font-size:.64rem;
+  letter-spacing:.05em;
+  color:var(--muted);
+  border:1px solid var(--rule);
+  border-radius:2px;
+  padding:.1rem .28rem;
+  margin-right:.55rem;
+  vertical-align:.08em;
+}
+
+.post-body .file a[href$=".pdf"  i]::before{content:"PDF"}
+.post-body .file a[href$=".png"  i]::before{content:"PNG"}
+.post-body .file a[href$=".jpg"  i]::before,
+.post-body .file a[href$=".jpeg" i]::before{content:"JPG"}
+.post-body .file a[href$=".svg"  i]::before{content:"SVG"}
+.post-body .file a[href$=".docx" i]::before{content:"DOCX"}
+.post-body .file a[href$=".pptx" i]::before{content:"PPTX"}
+.post-body .file a[href$=".xlsx" i]::before{content:"XLSX"}
+.post-body .file a[href$=".csv"  i]::before{content:"CSV"}
+.post-body .file a[href$=".ipynb" i]::before{content:"IPYNB"}
+.post-body .file a[href$=".py"   i]::before{content:"PY"}
+.post-body .file a[href$=".zip"  i]::before{content:"ZIP"}
+.post-body .file a[href$=".tex"  i]::before{content:"TEX"}
+.post-body .file a[href$=".mp4"  i]::before{content:"MP4"}
+.post-body .file a[href$=".mp3"  i]::before{content:"MP3"}
+.post-body .file a[href$=".txt"  i]::before,
+.post-body .file a[href$=".json" i]::before{content:"TXT"}
+
+/* manual override for links with no extension, e.g. a GitHub repo */
+.post-body .file a[data-type]::before{content:attr(data-type)}
+
+/* optional file size: <div class="file" data-size="1.2 MB"> */
+.post-body .file[data-size]::after{
+  content:attr(data-size);
+  font-family:var(--mono);
+  font-size:.68rem;
+  color:var(--muted);
+  margin-left:.6rem;
+  white-space:nowrap;
+}
+
+/* ── footnotes (main page) ───────────────────────────── */
+.fn-ref{
+  font-size:.85em;
+  line-height:0;
+  vertical-align:super;
+  white-space:nowrap;
+}
+.fn-ref a{
+  font-family:var(--mono);
+  text-decoration:none;
+  color:var(--accent);
+  padding:.1em .3em;
+  border-radius:2px;
+  transition:background .12s ease;
+}
+.fn-ref a:hover{
+  background:color-mix(in srgb,var(--accent) 14%,transparent);
+}
+
+.fn-list{
+  list-style:none;
+  counter-reset:fn;
+  margin:0;
+  padding:0;
+  font-size:.9rem;
+  line-height:1.55;
+  color:var(--muted);
+}
+.fn-list li{
+  counter-increment:fn;
+  display:grid;
+  grid-template-columns:1.5rem minmax(0,1fr);
+  gap:0 .7rem;
+  margin-bottom:.6rem;
+  margin-left:-.35rem;
+  padding:.15rem .35rem;
+  border-radius:3px;
+}
+.fn-list li::before{
+  content:counter(fn);
+  font-family:var(--mono);
+  font-size:.72rem;
+  text-align:right;
+  padding-top:.3em;
+}
+.fn-list p{margin:0}
+.fn-list a{color:var(--accent)}
+
+/* the note you jumped to lights up, so you know you arrived */
+.fn-list li:target{
+  background:color-mix(in srgb,var(--accent) 9%,transparent);
+  outline:1px solid color-mix(in srgb,var(--accent) 16%,transparent);
+  outline-offset:.1rem;
+}
+
+/* the little arrow back */
+.fn-back{
+  text-decoration:none;
+  color:var(--muted);
+  margin-left:.4em;
+  padding:.05em .25em;
+  border-radius:2px;
+  white-space:nowrap;
+  transition:color .12s ease,background .12s ease;
+}
+.fn-back:hover{
+  color:var(--accent);
+  background:color-mix(in srgb,var(--accent) 12%,transparent);
+}
+
+/* ── footer ───────────────────────────────────────────── */
+footer{
+  margin-top:4.5rem;
+  padding-top:1.2rem;
+  padding-bottom:3.5rem;
+  border-top:1px solid var(--rule);
+  color:var(--muted);
+  font-size:.83rem;
+}
+.footer-fine{margin-top:.5rem;max-width:32rem}
+
+/* ── small screens ────────────────────────────────────── */
+@media (max-width:38rem){
+  .entry{grid-template-columns:1fr;gap:.05rem;margin-bottom:1.45rem}
+  .when{padding-top:0}
+
+  .nav-inner{gap:1.1rem}
+  .nav-links{gap:.95rem}
+
+  .post summary{grid-template-columns:minmax(0,1fr) 1.1rem;gap:.1rem 1rem}
+  .post summary .when{grid-column:1;font-size:.72rem;padding-top:0}
+  .post-title{grid-column:1}
+  .post summary::after{grid-row:1 / span 2;align-self:center}
+  .post-body{padding:.1rem 0 1.5rem 0}
+  .post-body .file{width:100%}
+
+  html.cycle-name #site-name{font-size:1.65rem}   /* mono is wide; keeps it on one line */
+}
+
+/* ── print: Ctrl+P gives you the CV ───────────────────── */
+@page{margin:16mm}
+
+@media print{
+  :root{--bg:#fff;--ink:#000;--muted:#444;--rule:#bbb;--accent:#000;--surface:#fff;--todo:transparent}
+  body{background:#fff;font-size:10.5pt;line-height:1.45}
+  .skip,.nav,.links,.more,.footer-fine{display:none!important}
+  .masthead{padding-top:0}
+  section{margin-top:1.3rem}
+  h2{break-after:avoid;margin:0 0 .7rem}
+  .entry,.post{break-inside:avoid;margin-bottom:.7rem}
+  a{text-decoration:none;color:#000}
+  .tag{border-color:#aaa;color:#333}
+  .todo{background:none;border-bottom:1px dotted #999}
+  footer{margin-top:1.5rem}
+  .fn-ref a{color:#000}
+  .fn-back{display:none}          /* pointless on paper */
+  .fn-list li:target{background:none;outline:none}
+  #site-name{font-family:var(--serif)!important}
 }
